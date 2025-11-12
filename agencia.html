@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agência Caminho do Mar | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Agência Caminho do Mar - soluções completas em entretenimento, produção e gestão artística pelo Grupo VRPM."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-40">
+      <nav
+        class="flex items-center justify-between px-3 py-4 sm:px-4 md:px-6"
+        aria-label="Menu principal"
+      >
+        <a href="index.html" class="flex items-center gap-3" aria-label="Voltar para Grupo VRPM">
+          <img src="imagens/logoagencia.png" alt="Agência Caminho do Mar" class="h-16 w-auto sm:h-20 md:h-24" />
+        </a>
+        <div class="flex items-center gap-6 text-xs uppercase tracking-[0.3em]">
+          <a class="transition hover:text-accent" href="index.html#inicio">Grupo VRPM</a>
+          <a class="transition hover:text-accent" href="#contatos">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <section class="relative min-h-screen overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="h-full w-full object-cover"
+            aria-label="Vídeo de fundo da Agência Caminho do Mar"
+          >
+            <source src="videos/videoagencia.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos HTML5.
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-16 sm:px-6 sm:pt-20 md:gap-14 md:px-10 md:pb-20 md:pt-24">
+          <div class="flex max-w-3xl flex-col gap-6">
+            <span class="inline-flex w-max rounded-full border border-white/20 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/70">
+              Agência parceira do Grupo VRPM
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+              Estratégia 360° para artistas, marcas e experiências ao vivo.
+            </h1>
+            <p class="text-sm text-white/70 sm:text-base">
+              A Caminho do Mar conecta produção cultural, tecnologia e negócios para elevar carreiras, gerar impacto em eventos e ampliar o alcance de projetos autorais.
+            </p>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <a
+              href="#records"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Caminho do Mar Records
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#shows"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Venda de Shows
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#lojinha"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Lojinha do Artista
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#plataformas"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Plataformas Digitais
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#ingressos"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Caminho do Mar Ingressos
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#producao"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Produção
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#servicos"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Serviços
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#locacoes"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Locação de Estruturas
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#eventos"
+              class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm uppercase tracking-[0.3em] transition hover:border-accent hover:bg-white/10"
+            >
+              Eventos
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="records">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Caminho do Mar Records
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Gravadora boutique focada em artistas independentes e projetos especiais do Grupo VRPM. Atuamos desde a pré-produção, passando por composição, arranjos, captação e distribuição, sempre preservando a identidade sonora de cada artista.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-2">
+              <li class="rounded-xl border border-white/10 bg-black/50 p-4 text-sm text-white/80">
+                Produção musical completa e direção artística personalizada.
+              </li>
+              <li class="rounded-xl border border-white/10 bg-black/50 p-4 text-sm text-white/80">
+                Mixagem e masterização com padrões internacionais.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="shows">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Venda de Shows</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Conectamos artistas do casting VRPM a turnês, festivais e eventos corporativos. Construímos propostas exclusivas, alinhadas ao perfil do contratante e ao posicionamento de cada artista.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-3">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Agenciamento nacional e internacional.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Negociação completa e suporte jurídico.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Planejamento de logística, equipe e riders.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="lojinha">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Lojinha do Artista</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Estrutura completa para merchandising oficial: criação, produção, ecommerce, fulfillment e ativações em pontos de venda físicos.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Curadoria de produtos e coleções limitadas.</div>
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Loja virtual personalizada com integrações de pagamento.</div>
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Logística ponta a ponta, do estoque à entrega final.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="plataformas">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Plataformas Digitais</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Estratégias completas para distribuir conteúdo, ampliar audiência e monetizar resultados nas principais plataformas digitais.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Distribuição com dados e dashboards em tempo real.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Gestão de playlists e campanhas editoriais.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Análise de métricas e consultoria de performance.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="ingressos">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Caminho do Mar Ingressos
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Plataforma própria de emissão e controle de ingressos, com experiências digitais integradas para produção e público final.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-2">
+              <li class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">
+                Painel de vendas, relatórios inteligentes e suporte operacional.
+              </li>
+              <li class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">
+                Check-in rápido, QR Code dinâmico e integração com CRM.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="producao">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Produção</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Produção executiva e artística de shows, festivais, ativações de marca e experiências proprietárias da agência.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-3">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Equipe técnica multidisciplinar com expertise em grandes projetos.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Gestão de orçamento, fornecedores e cronogramas.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Planejamento de cenografia, conteúdo e storytelling.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="servicos">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Serviços</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Consultoria estratégica para carreiras artísticas, marcas e projetos culturais que desejam crescer com inteligência e propósito.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Planejamento e gestão de carreira.</div>
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Branding, posicionamento e comunicação.</div>
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Parcerias e patrocínios.</div>
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Inteligência de dados e BI para entretenimento.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="locacoes">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Locação de Estruturas</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Estruturas completas para eventos, shows e experiências personalizadas: palcos, equipamentos de áudio e vídeo, iluminação e mobiliário.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-3">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Inventário atualizado e equipe técnica especializada.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Montagem, desmontagem e operação completas.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">Planos sob medida para projetos de curta ou longa duração.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="eventos">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Eventos</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Desenvolvemos eventos próprios da agência e projetos especiais para marcas, do conceito à execução, entregando experiências memoráveis.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Concepção e curadoria de line-ups.</div>
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Campanhas promocionais e ativações on/offline.</div>
+              <div class="rounded-xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">Gestão de experiências VIP e hospitality.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contatos" class="py-16 sm:py-20">
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+          <div class="space-y-6">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Contato Agência Caminho do Mar
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Vamos construir seu próximo projeto? Conte com nossa equipe para produção, gestão e ampliação de resultados em todas as frentes do entretenimento.
+            </p>
+            <ul class="space-y-4 text-sm text-white/80 sm:text-base">
+              <li>
+                <span class="font-semibold text-white">E-mail:</span>
+                agencia@caminhodomar.com.br
+              </li>
+              <li>
+                <span class="font-semibold text-white">Telefone:</span>
+                +55 (11) 4500-3030
+              </li>
+              <li>
+                <span class="font-semibold text-white">Endereço:</span>
+                Avenida Atlântica, 707 - São Paulo, SP
+              </li>
+            </ul>
+          </div>
+          <form
+            class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 p-6 shadow-xl backdrop-blur"
+            aria-label="Formulário de contato Agência Caminho do Mar"
+          >
+            <div class="flex flex-col gap-2">
+              <label for="nome" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Nome
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                E-mail
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nome@email.com"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="mensagem" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Mensagem
+              </label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Conte-nos sobre o seu projeto"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+  </body>
+</html>
