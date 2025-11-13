@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caminho do Mar Records | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Caminho do Mar Records - Gravadora e Distribuidora Digital."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-40">
+      <div class="absolute right-3 top-3 z-50 flex items-center gap-6 text-xs uppercase tracking-[0.3em] sm:right-4 sm:top-4 md:right-6 md:top-4">
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./agencia.html">Agência Caminho do Mar</a>
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contatos">Contato</a>
+      </div>
+      <nav
+        class="relative flex items-center justify-center px-3 pt-2 pb-1 sm:px-4 sm:pt-2 sm:pb-1 md:px-6 md:pt-2 md:pb-1"
+        aria-label="Menu principal"
+      >
+        <a href="agencia.html" class="flex items-center gap-3" aria-label="Voltar para Agência Caminho do Mar">
+          <img src="imagens/logogravadora.png" alt="Caminho do Mar Records" class="h-48 w-auto sm:h-56 md:h-64" />
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <!-- Hero Section -->
+      <section class="relative min-h-screen overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0">
+          <img
+            src="imagens/capagravadora.png"
+            alt="Caminho do Mar Records"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-80 sm:px-6 sm:pt-96 md:gap-14 md:px-10 md:pb-20 md:pt-[28rem]">
+          <div class="flex max-w-3xl flex-col gap-6">
+            <span class="inline-flex w-max rounded-full border border-white/20 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/70">
+              Caminho do Mar Records
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl sm:whitespace-nowrap md:text-5xl">
+              Gravadora e Distribuidora Digital.
+            </h1>
+            <p class="text-sm text-white/70 sm:text-base">
+              Produção musical completa, desde a concepção até a distribuição digital. Preservamos a essência artística enquanto elevamos a qualidade técnica e o alcance comercial de cada projeto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre a Gravadora -->
+      <section class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Sobre a Caminho do Mar Records
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Gravadora boutique focada em artistas independentes e projetos especiais do Grupo VRPM. Atuamos desde a pré-produção, passando por composição, arranjos, captação e distribuição, sempre preservando a identidade sonora de cada artista.
+            </p>
+            <p class="text-sm text-white/70 sm:text-base">
+              Nossa abordagem combina expertise técnica, sensibilidade artística e estratégia comercial para transformar ideias em discos que ressoam com o público e representam fielmente a visão do artista.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Artistas Exclusivos -->
+      <section class="py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+            Artistas Exclusivos
+          </h2>
+          
+          <!-- Barbara Kush -->
+          <article class="space-y-6">
+            <h3 class="font-heading text-2xl font-semibold uppercase tracking-[0.2em] text-accent">
+              Barbara Kush
+            </h3>
+            
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="relative w-full aspect-video overflow-hidden rounded-2xl">
+                <img
+                  src="imagens/barbara.png"
+                  alt="Barbara Kush"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              
+              <div class="relative aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black/50 group cursor-pointer">
+                <img
+                  src="https://img.youtube.com/vi/oteQAlKaDG4/maxresdefault.jpg"
+                  alt="Barbara Kush - Vídeo"
+                  class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-70 transition"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=oteQAlKaDG4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="absolute inset-0 z-10 flex items-center justify-center transition"
+                  aria-label="Assistir Barbara Kush no YouTube"
+                  onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                >
+                  <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center">
+                      <div class="rounded-full bg-accent/90 p-4 transition group-hover:bg-accent group-hover:scale-110">
+                        <svg class="w-16 h-16 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold uppercase tracking-wider">Assistir no YouTube</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <p class="text-sm text-white/70 sm:text-base">
+              Artista exclusiva da Caminho do Mar Records, Barbara Kush traz uma identidade sonora única e autêntica, combinando elementos contemporâneos com uma estética visual marcante.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Serviços Principais -->
+      <section class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+            Nossos Serviços
+          </h2>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
+              <h3 class="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-accent">
+                Produção Musical
+              </h3>
+              <p class="text-sm text-white/80">
+                Produção musical completa e direção artística personalizada. Desenvolvemos o conceito sonoro, coordenamos sessões de gravação e garantimos que cada detalhe reflita a identidade do artista.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
+              <h3 class="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-accent">
+                Mixagem & Masterização
+              </h3>
+              <p class="text-sm text-white/80">
+                Mixagem e masterização com padrões internacionais. Trabalhamos com equipamentos de ponta e engenheiros experientes para entregar qualidade de estúdio profissional.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
+              <h3 class="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-accent">
+                Composição & Arranjos
+              </h3>
+              <p class="text-sm text-white/80">
+                Suporte criativo na composição e desenvolvimento de arranjos. Colaboramos com compositores e arranjadores para criar músicas que conectem com o público.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
+              <h3 class="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-accent">
+                Captação & Gravação
+              </h3>
+              <p class="text-sm text-white/80">
+                Estúdios equipados e técnicos especializados para captação de alta qualidade. Oferecemos ambientes acusticamente tratados e equipamentos profissionais.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
+              <h3 class="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-accent">
+                Distribuição Digital
+              </h3>
+              <p class="text-sm text-white/80">
+                Distribuição em todas as principais plataformas digitais: Spotify, Apple Music, Deezer, YouTube Music e mais. Garantimos que sua música alcance o público global.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
+              <h3 class="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-accent">
+                Direção Artística
+              </h3>
+              <p class="text-sm text-white/80">
+                Desenvolvimento de identidade visual e conceito artístico para álbuns e singles. Criamos capas, materiais promocionais e estratégias visuais que complementam a música.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Processo de Trabalho -->
+      <section class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+            Nosso Processo
+          </h2>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="flex flex-col gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-2xl font-bold text-black">
+                1
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Pré-Produção</h3>
+              <p class="text-sm text-white/70">
+                Desenvolvimento do conceito, seleção de repertório e planejamento detalhado do projeto.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-2xl font-bold text-black">
+                2
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Produção</h3>
+              <p class="text-sm text-white/70">
+                Gravação, arranjos e direção artística durante todo o processo criativo.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-2xl font-bold text-black">
+                3
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Pós-Produção</h3>
+              <p class="text-sm text-white/70">
+                Mixagem, masterização e finalização técnica com padrões internacionais.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-2xl font-bold text-black">
+                4
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Lançamento</h3>
+              <p class="text-sm text-white/70">
+                Distribuição digital, estratégia de lançamento e suporte promocional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Diferenciais -->
+      <section class="py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+            Por Que Escolher a Caminho do Mar Records
+          </h2>
+          <ul class="grid gap-4 sm:grid-cols-2">
+            <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+              Foco na identidade sonora única de cada artista, sem padronização.
+            </li>
+            <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+              Equipe multidisciplinar com experiência em diferentes gêneros musicais.
+            </li>
+            <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+              Infraestrutura completa: estúdios, equipamentos e técnicos especializados.
+            </li>
+            <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+              Acompanhamento personalizado em todas as etapas do projeto.
+            </li>
+            <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+              Estratégia comercial integrada com a distribuição e promoção.
+            </li>
+            <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+              Conexão com a rede do Grupo VRPM para ampliar oportunidades.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contatos" class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+          <div class="space-y-6">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Contato Caminho do Mar Records
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Pronto para transformar sua música em um projeto profissional? Entre em contato com nossa equipe e descubra como podemos ajudar a elevar seu som.
+            </p>
+            <ul class="space-y-4 text-sm text-white/80 sm:text-base">
+              <li>
+                <span class="font-semibold text-white">E-mail:</span>
+                records@caminhodomar.com.br
+              </li>
+              <li>
+                <span class="font-semibold text-white">Telefone:</span>
+                +55 (11) 4500-3030
+              </li>
+              <li>
+                <span class="font-semibold text-white">Endereço:</span>
+                Avenida Atlântica, 707 - São Paulo, SP
+              </li>
+            </ul>
+          </div>
+          <form
+            class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 p-6 shadow-xl backdrop-blur"
+            aria-label="Formulário de contato Caminho do Mar Records"
+          >
+            <div class="flex flex-col gap-2">
+              <label for="nome" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Nome
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                E-mail
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nome@email.com"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="projeto" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Tipo de Projeto
+              </label>
+              <select
+                id="projeto"
+                name="projeto"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              >
+                <option value="">Selecione uma opção</option>
+                <option value="album">Álbum Completo</option>
+                <option value="single">Single/EP</option>
+                <option value="producao">Produção Musical</option>
+                <option value="mixagem">Mixagem/Masterização</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="mensagem" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Mensagem
+              </label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Conte-nos sobre seu projeto musical"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+  </body>
+</html>
+
