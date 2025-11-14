@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lojinha do Artista | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Lojinha do Artista - Merchandising oficial do Grupo VRPM. Camisetas, bonés, canecas, squeezes e muito mais."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-40">
+      <!-- Barra Superior com Pesquisa, Conta e Carrinho -->
+      <div class="border-b border-white/10 bg-black/60 backdrop-blur-sm">
+        <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 md:px-8">
+          <!-- Espaço à esquerda para balancear -->
+          <div class="flex-1"></div>
+
+          <!-- Barra de Pesquisa - Centralizada -->
+          <div class="flex-1 max-w-md">
+            <form class="relative" role="search" aria-label="Buscar produtos">
+              <input
+                type="search"
+                id="search-input"
+                name="search"
+                placeholder="Buscar produtos..."
+                class="w-full rounded-full border border-white/20 bg-white px-4 py-2 pr-10 text-sm text-black placeholder:text-black/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                aria-label="Campo de busca"
+              />
+              <button
+                type="submit"
+                class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-2 text-black/60 transition hover:text-black focus:outline-none focus:ring-2 focus:ring-accent"
+                aria-label="Buscar"
+              >
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Links de Navegação e Ações - Direita -->
+          <div class="flex items-center gap-4 sm:gap-6 flex-1 justify-end">
+            <!-- Minha Conta -->
+            <a
+              href="#conta"
+              class="flex items-center gap-2 text-sm uppercase tracking-wide text-white/80 transition hover:text-accent sm:text-base"
+              aria-label="Minha Conta"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <span class="hidden sm:inline">Minha Conta</span>
+            </a>
+
+            <!-- Carrinho de Compras -->
+            <button
+              id="cart-button"
+              class="relative flex items-center gap-2 text-sm uppercase tracking-wide text-white/80 transition hover:text-accent sm:text-base"
+              aria-label="Carrinho de compras"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span class="hidden sm:inline">Carrinho</span>
+              <span id="cart-count" class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-black">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links de Navegação Superior -->
+      <div class="absolute right-3 top-16 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:right-4 sm:top-20 md:right-6 md:top-20 md:text-base">
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./agencia.html">Agência Caminho do Mar</a>
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contato">Contato</a>
+      </div>
+
+      <!-- Logo -->
+      <nav
+        class="relative flex items-center justify-center px-3 pt-2 pb-1 sm:px-4 sm:pt-2 sm:pb-1 md:px-6 md:pt-2 md:pb-1"
+        aria-label="Menu principal"
+      >
+        <a href="agencia.html" class="flex items-center gap-3" aria-label="Voltar para Agência Caminho do Mar">
+          <img src="imagens/agencia/logoagencia.png" alt="Lojinha do Artista" class="h-48 w-auto sm:h-56 md:h-64" />
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <!-- Hero Section -->
+      <section class="relative min-h-screen overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0">
+          <img
+            src="imagens/lojinha/capalojinha.png"
+            alt="Lojinha do Artista"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-80 sm:px-6 sm:pt-96 md:gap-14 md:px-10 md:pb-20 md:pt-[28rem]">
+          <div class="flex max-w-3xl flex-col gap-6">
+            <span class="inline-flex w-max rounded-full border border-white/20 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/70">
+              Lojinha do Artista
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+              Lojinha Oficial dos Artistas.
+            </h1>
+            <p class="text-sm text-white/70 sm:text-base">
+              Aqui você encontra os produtos oficiais dos nossos artistas e leva para casa itens exclusivos que te aproximam ainda mais deles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Produtos -->
+      <section class="bg-white/5 py-16 sm:py-20" id="produtos">
+        <div class="mx-auto flex max-w-7xl flex-col gap-12 px-4 sm:px-6 md:px-8 lg:px-12">
+          <div class="flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Nossos Produtos
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Produtos exclusivos e coleções limitadas para você mostrar seu apoio aos artistas.
+            </p>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Camiseta Barbara Kush -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="imagens/lojinha/camisetabarbara.png" alt="Camiseta Barbara Kush" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Camiseta Barbara Kush</h3>
+                <p class="text-sm text-white/70">Algodão 100%, estampa exclusiva</p>
+                <p class="text-lg font-semibold text-accent">R$ 89,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Boné Barbara -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="imagens/lojinha/bonebarbara.png" alt="Boné Barbara Kush" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Boné Barbara Kush</h3>
+                <p class="text-sm text-white/70">Ajuste por fivela, borda reta</p>
+                <p class="text-lg font-semibold text-accent">R$ 79,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Caneca Barbara -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="imagens/lojinha/canecabarbara.png" alt="Caneca Barbara Kush" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Caneca Barbara Kush</h3>
+                <p class="text-sm text-white/70">325ml, estampa exclusiva</p>
+                <p class="text-lg font-semibold text-accent">R$ 49,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Chaveiro VRPM -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80" alt="Chaveiro VRPM" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-base font-semibold">Chaveiro VRPM</h3>
+                <p class="text-sm text-white/70">Metal, design exclusivo</p>
+                <p class="text-lg font-semibold text-accent">R$ 24,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar
+              </button>
+            </article>
+            <!-- Camiseta Premium -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80" alt="Camiseta Premium" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Camiseta Premium</h3>
+                <p class="text-sm text-white/70">Algodão penteado, design exclusivo</p>
+                <p class="text-lg font-semibold text-accent">R$ 119,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Squeeze 500ml -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80" alt="Squeeze 500ml" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Squeeze 500ml</h3>
+                <p class="text-sm text-white/70">Aço inox, mantém temperatura</p>
+                <p class="text-lg font-semibold text-accent">R$ 89,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Mochila VRPM -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80" alt="Mochila VRPM" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Mochila VRPM</h3>
+                <p class="text-sm text-white/70">30L, múltiplos bolsos</p>
+                <p class="text-lg font-semibold text-accent">R$ 179,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Button Pack -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=800&q=80" alt="Button Pack" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-base font-semibold">Button Pack</h3>
+                <p class="text-sm text-white/70">Kit com 3 bottons</p>
+                <p class="text-lg font-semibold text-accent">R$ 19,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar
+              </button>
+            </article>
+            <!-- Boné Curved Brim -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?w=800&q=80" alt="Boné Curved Brim" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Boné Curved Brim</h3>
+                <p class="text-sm text-white/70">Borda curvada, design clássico</p>
+                <p class="text-lg font-semibold text-accent">R$ 89,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Copo Térmico -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80" alt="Copo Térmico" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Copo Térmico</h3>
+                <p class="text-sm text-white/70">350ml, mantém temperatura</p>
+                <p class="text-lg font-semibold text-accent">R$ 69,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Camiseta Edição Limitada -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80" alt="Camiseta Edição Limitada" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Camiseta Edição Limitada</h3>
+                <p class="text-sm text-white/70">Coleção especial, tiragem limitada</p>
+                <p class="text-lg font-semibold text-accent">R$ 149,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Bolsa Tote -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&q=80" alt="Bolsa Tote" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Bolsa Tote</h3>
+                <p class="text-sm text-white/70">Algodão, alças longas</p>
+                <p class="text-lg font-semibold text-accent">R$ 89,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Squeeze 750ml -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80" alt="Squeeze 750ml" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Squeeze 750ml</h3>
+                <p class="text-sm text-white/70">Aço inox, capacidade maior</p>
+                <p class="text-lg font-semibold text-accent">R$ 109,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Chaveiro Artista -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80" alt="Chaveiro Artista" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-base font-semibold">Chaveiro Artista</h3>
+                <p class="text-sm text-white/70">Design personalizado</p>
+                <p class="text-lg font-semibold text-accent">R$ 29,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar
+              </button>
+            </article>
+            <!-- Copo de Vidro -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80" alt="Copo de Vidro" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Copo de Vidro</h3>
+                <p class="text-sm text-white/70">400ml, design moderno</p>
+                <p class="text-lg font-semibold text-accent">R$ 39,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Mochila Compacta -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80" alt="Mochila Compacta" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-lg font-semibold">Mochila Compacta</h3>
+                <p class="text-sm text-white/70">20L, design minimalista</p>
+                <p class="text-lg font-semibold text-accent">R$ 149,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar ao Carrinho
+              </button>
+            </article>
+            <!-- Button Individual -->
+            <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <div class="aspect-square overflow-hidden rounded-xl bg-white/5">
+                <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=800&q=80" alt="Button Individual" class="h-full w-full object-cover transition-transform group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="font-heading text-base font-semibold">Button Individual</h3>
+                <p class="text-sm text-white/70">Button único, 5cm</p>
+                <p class="text-lg font-semibold text-accent">R$ 9,90</p>
+              </div>
+              <button class="mt-auto rounded-full border border-accent bg-transparent px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black">
+                Adicionar
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+          <div class="space-y-6">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Contato Lojinha do Artista
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Dúvidas sobre produtos, pedidos ou envios? Entre em contato com nossa equipe.
+            </p>
+            <ul class="space-y-4 text-sm text-white/80 sm:text-base">
+              <li>
+                <span class="font-semibold text-white">E-mail:</span>
+                lojinha@caminhodomar.com.br
+              </li>
+              <li>
+                <span class="font-semibold text-white">Telefone:</span>
+                +55 (11) 4500-3030
+              </li>
+              <li>
+                <span class="font-semibold text-white">Endereço:</span>
+                Avenida Atlântica, 707 - São Paulo, SP
+              </li>
+            </ul>
+          </div>
+          <form
+            class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 p-6 shadow-xl backdrop-blur"
+            aria-label="Formulário de contato Lojinha do Artista"
+          >
+            <div class="flex flex-col gap-2">
+              <label for="nome" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Nome
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                E-mail
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nome@email.com"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="mensagem" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Mensagem
+              </label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Conte-nos sobre sua dúvida ou pedido"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/shared/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+    <script>
+      // Gerenciamento do Carrinho
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartCount = document.getElementById('cart-count');
+      const cartButton = document.getElementById('cart-button');
+
+      // Atualizar contador do carrinho
+      function updateCartCount() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCount.textContent = totalItems;
+        cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+
+      // Adicionar produto ao carrinho
+      function addToCart(productName, productPrice) {
+        const existingItem = cart.find(item => item.name === productName);
+        
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({
+            name: productName,
+            price: productPrice,
+            quantity: 1
+          });
+        }
+        
+        updateCartCount();
+        
+        // Feedback visual
+        cartButton.classList.add('animate-pulse');
+        setTimeout(() => {
+          cartButton.classList.remove('animate-pulse');
+        }, 300);
+      }
+
+      // Event listeners para botões "Adicionar ao Carrinho"
+      document.querySelectorAll('button').forEach(button => {
+        if (button.textContent.includes('Adicionar')) {
+          button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productCard = this.closest('article');
+            const productName = productCard.querySelector('h3').textContent;
+            const productPrice = productCard.querySelector('.text-accent').textContent;
+            
+            addToCart(productName, productPrice);
+            
+            // Feedback visual no botão
+            const originalText = this.textContent;
+            this.textContent = 'Adicionado!';
+            this.classList.add('bg-accent', 'text-black');
+            this.classList.remove('border-accent', 'bg-transparent', 'text-accent');
+            
+            setTimeout(() => {
+              this.textContent = originalText;
+              this.classList.remove('bg-accent', 'text-black');
+              this.classList.add('border-accent', 'bg-transparent', 'text-accent');
+            }, 1500);
+          });
+        }
+      });
+
+      // Funcionalidade da Barra de Pesquisa
+      const searchForm = document.querySelector('form[role="search"]');
+      const searchInput = document.getElementById('search-input');
+
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        
+        if (searchTerm) {
+          // Filtrar produtos visíveis
+          const products = document.querySelectorAll('article');
+          let found = false;
+          
+          products.forEach((product, index) => {
+            const productName = product.querySelector('h3').textContent.toLowerCase();
+            const productDescription = product.querySelector('p.text-white\\/70')?.textContent.toLowerCase() || '';
+            
+            if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
+              product.style.display = '';
+              if (!found) {
+                found = true;
+                // Scroll suave até o primeiro produto encontrado
+                setTimeout(() => {
+                  product.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+              }
+            } else {
+              product.style.display = 'none';
+            }
+          });
+          
+          if (!found) {
+            alert('Nenhum produto encontrado com o termo: ' + searchTerm);
+          }
+        } else {
+          // Mostrar todos os produtos se a busca estiver vazia
+          document.querySelectorAll('article').forEach(product => {
+            product.style.display = '';
+          });
+        }
+      });
+
+      // Limpar filtro quando o campo de busca for limpo
+      searchInput.addEventListener('input', function() {
+        if (this.value.trim() === '') {
+          document.querySelectorAll('article').forEach(product => {
+            product.style.display = '';
+          });
+        }
+      });
+
+      // Abrir carrinho ao clicar no botão
+      cartButton.addEventListener('click', function() {
+        if (cart.length === 0) {
+          alert('Seu carrinho está vazio. Adicione produtos para continuar!');
+        } else {
+          let cartSummary = 'Carrinho de Compras:\n\n';
+          let total = 0;
+          
+          cart.forEach(item => {
+            const itemTotal = parseFloat(item.price.replace('R$ ', '').replace(',', '.')) * item.quantity;
+            total += itemTotal;
+            cartSummary += `${item.name} x${item.quantity} - R$ ${itemTotal.toFixed(2).replace('.', ',')}\n`;
+          });
+          
+          cartSummary += `\nTotal: R$ ${total.toFixed(2).replace('.', ',')}`;
+          alert(cartSummary);
+        }
+      });
+
+      // Inicializar contador do carrinho
+      updateCartCount();
+    </script>
+
+  </body>
+</html>
+
