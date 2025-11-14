@@ -40,7 +40,7 @@
   </head>
   <body class="min-h-screen bg-primary text-white font-sans antialiased">
     <header class="absolute inset-x-0 top-0 z-40">
-      <div class="absolute right-3 top-3 z-50 flex items-center gap-6 text-xs uppercase tracking-[0.3em] sm:right-4 sm:top-4 md:right-6 md:top-4">
+      <div class="absolute right-3 top-3 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:right-4 sm:top-4 md:right-6 md:top-4 md:text-base">
         <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./agencia.html">Agência Caminho do Mar</a>
         <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contatos">Contato</a>
       </div>
@@ -49,7 +49,7 @@
         aria-label="Menu principal"
       >
         <a href="agencia.html" class="flex items-center gap-3" aria-label="Voltar para Agência Caminho do Mar">
-          <img src="imagens/logogravadora.png" alt="Caminho do Mar Records" class="h-48 w-auto sm:h-56 md:h-64" />
+          <img src="imagens/gravadora/logogravadora.png" alt="Caminho do Mar Records" class="h-48 w-auto sm:h-56 md:h-64" />
         </a>
       </nav>
     </header>
@@ -59,7 +59,7 @@
       <section class="relative min-h-screen overflow-hidden border-b border-white/10">
         <div class="absolute inset-0 z-0">
           <img
-            src="imagens/capagravadora.png"
+            src="imagens/gravadora/capagravadora.png"
             alt="Caminho do Mar Records"
             class="h-full w-full object-cover"
           />
@@ -101,8 +101,57 @@
       <section class="py-16 sm:py-20">
         <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
           <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
-            Artistas Exclusivos
+            Contrate Nossos Artistas
           </h2>
+          
+          <!-- Ben Hur -->
+          <article class="space-y-6">
+            <h3 class="font-heading text-2xl font-semibold uppercase tracking-[0.2em] text-accent">
+              Ben Hur
+            </h3>
+            
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="relative w-full aspect-video overflow-hidden rounded-2xl">
+                <img
+                  src="imagens/gravadora/benhur.png"
+                  alt="Ben Hur"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              
+              <div class="relative aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black/50 group cursor-pointer">
+                <img
+                  src="https://img.youtube.com/vi/U2vO2h7zrkU/maxresdefault.jpg"
+                  alt="Ben Hur - Vídeo"
+                  class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-70 transition"
+                  loading="lazy"
+                />
+                <a
+                  href="https://youtu.be/U2vO2h7zrkU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="absolute inset-0 z-10 flex items-center justify-center transition"
+                  aria-label="Assistir Ben Hur no YouTube"
+                  onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                >
+                  <div class="text-center space-y-4">
+                    <div class="flex items-center justify-center">
+                      <div class="rounded-full bg-accent/90 p-4 transition group-hover:bg-accent group-hover:scale-110">
+                        <svg class="w-16 h-16 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold uppercase tracking-wider">Assistir no YouTube</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <p class="text-sm text-white/70 sm:text-base">
+              Ben Hur é cantor, compositor e uma das vozes mais marcantes do pagode da Baixada Santista. Com mais de 30 anos de história na música, ele apresenta no projeto Pagode DuBen uma mistura envolvente de samba, pagode de raiz e romantismo, sempre com interpretações cheias de personalidade.
+            </p>
+          </article>
           
           <!-- Barbara Kush -->
           <article class="space-y-6">
@@ -113,7 +162,7 @@
             <div class="grid gap-6 sm:grid-cols-2">
               <div class="relative w-full aspect-video overflow-hidden rounded-2xl">
                 <img
-                  src="imagens/barbara.png"
+                  src="imagens/gravadora/barbara.png"
                   alt="Barbara Kush"
                   class="absolute inset-0 w-full h-full object-cover"
                 />
@@ -149,7 +198,7 @@
             </div>
             
             <p class="text-sm text-white/70 sm:text-base">
-              Artista exclusiva da Caminho do Mar Records, Barbara Kush traz uma identidade sonora única e autêntica, combinando elementos contemporâneos com uma estética visual marcante.
+              Barbara Kush é cantora, compositora e intérprete, dona de uma identidade forte, sensível e marcante. Unindo presença, técnica e autenticidade, ela transforma sentimentos em música e leva ao público canções que falam de amor, superação, fé e verdade. Com uma voz poderosa e um estilo único, Barbara Kush vem conquistando espaço com performances emocionantes, letras profundas e uma estética artística que traduz sua personalidade: intensidade, beleza e propósito.
             </p>
           </article>
         </div>
@@ -388,10 +437,11 @@
         <p class="text-base">
           © 2025 Grupo VRPM — Produzido por:
         </p>
-        <img src="imagens/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+        <img src="imagens/shared/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
       </div>
     </footer>
 
   </body>
 </html>
+
 
