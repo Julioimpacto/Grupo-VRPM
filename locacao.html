@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locação de Estruturas | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Locação de Estruturas - Equipamentos e estruturas profissionais para shows e eventos. Palcos, som, iluminação e muito mais."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+      
+      .hero-image-zoom {
+        animation: zoomInOut 8s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-40">
+      <!-- Links de Navegação Superior -->
+      <div class="absolute left-3 top-3 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:left-4 sm:top-4 md:left-6 md:top-4 md:text-base">
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./agencia.html">Agência Caminho do Mar</a>
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contato">Contato</a>
+      </div>
+
+      <!-- Logo -->
+      <nav
+        class="relative flex items-center justify-center px-3 pt-2 pb-1 sm:px-4 sm:pt-2 sm:pb-1 md:px-6 md:pt-2 md:pb-1"
+        aria-label="Menu principal"
+      >
+        <a href="agencia.html" class="flex items-center gap-3" aria-label="Voltar para Agência Caminho do Mar">
+          <img src="imagens/agencia/logoagencia.png" alt="Locação de Estruturas" class="h-48 w-auto sm:h-56 md:h-64" />
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <!-- Hero Section -->
+      <section class="relative min-h-screen overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+          <img
+            src="imagens/locacao/capalocacao.png"
+            alt="Locação de Estruturas"
+            class="h-full w-full object-cover hero-image-zoom"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-80 sm:px-6 sm:pt-96 md:gap-14 md:px-10 md:pb-20 md:pt-[28rem]">
+          <div class="flex max-w-3xl flex-col gap-6">
+            <span class="inline-flex w-max rounded-full border border-white/20 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/70">
+              Locação de Estruturas
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+              Equipamentos Profissionais para Shows e Eventos.
+            </h1>
+            <p class="text-sm text-white/70 sm:text-base">
+                Palcos, Camarotes, Tendas e Galpões, Som , Iluminação, Painéis de Led, Barricadas, Fechamentos, Banheiros, Geradores, Cenografia, etc 
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a
+                href="#equipamentos"
+                class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                Ver Equipamentos
+              </a>
+              <a
+                href="#contato"
+                class="inline-flex items-center justify-center rounded-full border border-accent bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-accent transition hover:bg-accent hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                Solicitar Orçamento
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Equipamentos -->
+      <section class="bg-white/5 py-16 sm:py-20" id="equipamentos">
+        <div class="mx-auto flex max-w-7xl flex-col gap-12 px-4 sm:px-6 md:px-8 lg:px-12">
+          <div class="flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Nossos Equipamentos
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Equipamentos profissionais de alta qualidade para todos os tipos de eventos.
+            </p>
+          </div>
+
+          <!-- Palcos e Estruturas -->
+          <div class="flex flex-col gap-8">
+            <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
+              Palcos e Estruturas
+            </h3>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/palco.png"
+                    alt="Palco Modular"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Palcos</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/camarote.png"
+                    alt="Camarotes"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Camarotes</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/arquibancada.png"
+                    alt="Grada e Arquibancada"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Arquibancadas</h4>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Som e Áudio -->
+          <div class="flex flex-col gap-8">
+            <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
+              Som e Áudio
+            </h3>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/sistemadesom.png"
+                    alt="Sistema de Som Profissional"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Sistema de Som Profissional</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/mesa.png"
+                    alt="Mesa de Som"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Mesa de Som</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/microfone.png"
+                    alt="Microfones e Amplificadores"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Microfones e Amplificadores</h4>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Iluminação -->
+          <div class="flex flex-col gap-8">
+            <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
+              Iluminação
+            </h3>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/iluminacao.png"
+                    alt="Iluminação"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Iluminação</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/efeitos.png"
+                    alt="Efeitos Especiais"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Efeitos Especiais</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/painel.png"
+                    alt="Painel de LED"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Painel de LED</h4>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Grades e Estruturas -->
+          <div class="flex flex-col gap-8">
+            <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
+              Grades e Estruturas
+            </h3>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/grades.png"
+                    alt="Grades"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Grades</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/tendas.png"
+                    alt="Tendas"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Tendas</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/banheiro.png"
+                    alt="Banheiros"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Banheiros</h4>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Equipamentos Adicionais -->
+          <div class="flex flex-col gap-8">
+            <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
+              Equipamentos Adicionais
+            </h3>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/gerador.png"
+                    alt="Geradores"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Geradores</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/camarim.png"
+                    alt="Camarim"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Camarim</h4>
+                </div>
+              </article>
+
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+                <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
+                  <img
+                    src="imagens/locacao/monitoramento.png"
+                    alt="Monitoramento"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-heading text-lg font-semibold">Monitoramento</h4>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Serviços -->
+      <section class="bg-black/40 py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <div class="flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Nossos Serviços
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Além da locação, oferecemos serviços completos para seu evento.
+            </p>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Instalação Profissional</h3>
+              <p class="text-sm text-white/70">
+                Equipe técnica especializada para montagem e desmontagem de todos os equipamentos.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Suporte Durante o Evento</h3>
+              <p class="text-sm text-white/70">
+                Técnicos disponíveis durante todo o evento para garantir que tudo funcione perfeitamente.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Consultoria Técnica</h3>
+              <p class="text-sm text-white/70">
+                Ajudamos a planejar a melhor solução técnica para seu evento.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Transporte e Logística</h3>
+              <p class="text-sm text-white/70">
+                Cuidamos de todo o transporte e logística dos equipamentos.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Seguro e Certificações</h3>
+              <p class="text-sm text-white/70">
+                Todos os equipamentos possuem seguro e certificações de segurança.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="font-heading text-lg font-semibold">Orçamento Personalizado</h3>
+              <p class="text-sm text-white/70">
+                Criamos orçamentos personalizados de acordo com suas necessidades.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+          <div class="space-y-6">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Solicite seu Orçamento
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Entre em contato conosco e receba um orçamento personalizado para seu evento. Nossa equipe está pronta para ajudar você a criar um evento inesquecível.
+            </p>
+            <ul class="space-y-4 text-sm text-white/80 sm:text-base">
+              <li>
+                <span class="font-semibold text-white">E-mail:</span>
+                locacao@caminhodomar.com.br
+              </li>
+              <li>
+                <span class="font-semibold text-white">Telefone:</span>
+                +55 (11) 4500-3030
+              </li>
+              <li>
+                <span class="font-semibold text-white">WhatsApp:</span>
+                +55 (11) 99999-9999
+              </li>
+              <li>
+                <span class="font-semibold text-white">Endereço:</span>
+                Avenida Atlântica, 707 - São Paulo, SP
+              </li>
+            </ul>
+            <div class="pt-4">
+              <p class="text-sm font-semibold text-white/90 sm:text-base">
+                Horário de Atendimento:
+              </p>
+              <p class="text-sm text-white/70 sm:text-base">
+                Segunda a Sexta: 9h às 18h<br />
+                Sábado: 9h às 13h
+              </p>
+            </div>
+          </div>
+          <form
+            id="contact-form"
+            class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 p-6 shadow-xl backdrop-blur"
+            aria-label="Formulário de solicitação de orçamento"
+          >
+            <div class="flex flex-col gap-2">
+              <label for="nome" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Nome Completo
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                required
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                E-mail
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nome@email.com"
+                required
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="telefone" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Telefone / WhatsApp
+              </label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(11) 99999-9999"
+                required
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="evento" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Tipo de Evento
+              </label>
+              <select
+                id="evento"
+                name="evento"
+                required
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              >
+                <option value="">Selecione o tipo de evento</option>
+                <option value="show">Show Musical</option>
+                <option value="festival">Festival</option>
+                <option value="evento-corporativo">Evento Corporativo</option>
+                <option value="casamento">Casamento</option>
+                <option value="aniversario">Aniversário</option>
+                <option value="formatura">Formatura</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="data" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Data do Evento
+              </label>
+              <input
+                type="date"
+                id="data"
+                name="data"
+                required
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="equipamentos" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Equipamentos de Interesse
+              </label>
+              <textarea
+                id="equipamentos"
+                name="equipamentos"
+                rows="3"
+                placeholder="Descreva os equipamentos que você precisa (palco, som, iluminação, etc.)"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              ></textarea>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="mensagem" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Mensagem Adicional
+              </label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Informações adicionais sobre seu evento (local, público estimado, etc.)"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              Enviar Solicitação
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/shared/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+    <script>
+      // Formulário de Contato
+      const contactForm = document.getElementById('contact-form');
+
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Coletar dados do formulário
+        const formData = {
+          nome: document.getElementById('nome').value,
+          email: document.getElementById('email').value,
+          telefone: document.getElementById('telefone').value,
+          evento: document.getElementById('evento').value,
+          data: document.getElementById('data').value,
+          equipamentos: document.getElementById('equipamentos').value,
+          mensagem: document.getElementById('mensagem').value
+        };
+
+        // Validação básica
+        if (!formData.nome || !formData.email || !formData.telefone || !formData.evento || !formData.data) {
+          alert('Por favor, preencha todos os campos obrigatórios.');
+          return;
+        }
+
+        // Simular envio (aqui você integraria com um backend)
+        console.log('Dados do formulário:', formData);
+        
+        // Feedback visual
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Enviando...';
+        submitButton.disabled = true;
+
+        // Simular delay de envio
+        setTimeout(() => {
+          alert('Solicitação enviada com sucesso! Nossa equipe entrará em contato em breve.');
+          contactForm.reset();
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        }, 1500);
+      });
+
+      // Máscara para telefone
+      const telefoneInput = document.getElementById('telefone');
+      telefoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length <= 11) {
+          if (value.length <= 10) {
+            value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+          } else {
+            value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+          }
+          e.target.value = value;
+        }
+      });
+
+      // Definir data mínima como hoje
+      const dataInput = document.getElementById('data');
+      const today = new Date().toISOString().split('T')[0];
+      dataInput.setAttribute('min', today);
+    </script>
+
+  </body>
+</html>
+
