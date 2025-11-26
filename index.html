@@ -35,6 +35,9 @@
       .carousel-slide {
         transition: opacity 700ms ease, transform 700ms ease;
       }
+      .logo-shadow-white {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+      }
     </style>
   </head>
   <body class="bg-primary text-white font-sans antialiased">
@@ -112,6 +115,40 @@
                 Entretenimento &amp; Negócios
               </span>
             </div>
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+              <a
+                href="agencia.html"
+                class="group inline-flex items-center justify-center rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-accent hover:bg-accent/20 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:px-5 sm:py-2.5 sm:text-sm"
+              >
+                Agência Caminho do Mar
+              </a>
+              <a
+                href="#"
+                class="group inline-flex items-center justify-center rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-accent hover:bg-accent/20 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:px-5 sm:py-2.5 sm:text-sm"
+              >
+                Adega Central
+              </a>
+              <a
+                href="#"
+                class="group inline-flex items-center justify-center rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-accent hover:bg-accent/20 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:px-5 sm:py-2.5 sm:text-sm"
+              >
+                Espaço de Eventos
+              </a>
+              <a
+                href="#"
+                class="group inline-flex items-center justify-center rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-accent hover:bg-accent/20 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:px-5 sm:py-2.5 sm:text-sm"
+              >
+                Eita Achei
+              </a>
+              <a
+                href="https://www.instagram.com/crechesaojorge/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center justify-center rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-accent hover:bg-accent/20 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:px-5 sm:py-2.5 sm:text-sm"
+              >
+                Social
+              </a>
+            </div>
             <div
               class="flex items-center justify-between gap-6 text-xs uppercase tracking-wider text-white/70 sm:text-sm"
             >
@@ -160,6 +197,26 @@
 
       <section id="expertise" class="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20 md:px-12">
         <div class="flex flex-col gap-10">
+          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            <img
+              src="imagens/index/projetos.png"
+              alt="Projetos"
+              class="logo-shadow-white h-auto max-h-32 w-auto opacity-80 transition hover:opacity-100 sm:max-h-40 md:max-h-48"
+              loading="lazy"
+            />
+            <img
+              src="imagens/index/esportes.png"
+              alt="Esportes"
+              class="logo-shadow-white h-auto max-h-32 w-auto opacity-80 transition hover:opacity-100 sm:max-h-40 md:max-h-48"
+              loading="lazy"
+            />
+            <img
+              src="imagens/index/ia.png"
+              alt="IA"
+              class="logo-shadow-white h-auto max-h-32 w-auto opacity-80 transition hover:opacity-100 sm:max-h-40 md:max-h-48"
+              loading="lazy"
+            />
+          </div>
           <div class="flex flex-col gap-4">
             <span class="text-xs uppercase tracking-[0.3em] text-accent">Expertise</span>
             <h2 class="font-heading text-3xl font-semibold sm:text-4xl">
@@ -432,4 +489,5 @@
     </script>
   </body>
 </html>
+
 
