@@ -197,6 +197,23 @@
 
       <section id="expertise" class="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20 md:px-12">
         <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-1 text-center">
+            <p class="text-sm leading-relaxed text-white/80 sm:text-base md:text-lg">
+              O Grupo VRPM é formado por um ecossistema de empresas que atuam de forma integrada no universo do entretenimento, cultura, tecnologia e experiências ao vivo. Nosso propósito é conectar pessoas por meio de momentos inesquecíveis, soluções criativas e projetos que transformam realidades.
+            </p>
+            <p class="text-sm leading-relaxed text-white/80 sm:text-base md:text-lg">
+              Com uma atuação ampla e sólida, o Grupo reúne empresas especializadas em shows, eventos, produção artística e musical, locação de estruturas e equipamentos, fornecimento de alimentos e bebidas, além de agenciamento de artistas, venda de ingressos, gravadora e distribuidora de música, e um diversificado e-commerce de produtos e equipamentos.
+            </p>
+            <p class="text-sm leading-relaxed text-white/80 sm:text-base md:text-lg">
+              Inovação também faz parte do nosso DNA: desenvolvemos soluções em Inteligência Artificial, criamos projetos de marketing e iniciativas incentivadas, e operamos em segmentos como esportes, responsabilidade social e produção cultural.
+            </p>
+            <p class="text-sm leading-relaxed text-white/80 sm:text-base md:text-lg">
+              Cada empresa do Grupo VRPM contribui com sua expertise para entregar excelência, profissionalismo e experiências memoráveis — sempre com compromisso, criatividade e visão de futuro.
+            </p>
+            <p class="text-base font-semibold text-white sm:text-lg md:text-xl">
+              Grupo VRPM – Conectando talentos, criando experiências, impactando pessoas.
+            </p>
+          </div>
           <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
             <img
               src="imagens/index/projetos.png"
@@ -471,23 +488,7 @@
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
         menuLinks.classList.toggle('hidden');
-      });
+      }
 
-      window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768) {
-          menuLinks.classList.remove('hidden');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        } else if (!menuToggle.classList.contains('hidden') && menuToggle.getAttribute('aria-expanded') === 'false') {
-          menuLinks.classList.add('hidden');
-        }
-      });
-
-      window.addEventListener('DOMContentLoaded', () => {
-        setActiveSlide(0);
-        startAutoPlay();
-      });
-    </script>
-  </body>
-</html>
 
 
