@@ -146,7 +146,7 @@
               Nossos Parceiros
             </h3>
             <div class="flex items-center justify-between gap-2 pl-0 pr-0 pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 sm:justify-start md:grid-cols-6 md:pb-0">
-              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mr-3 md:-mr-2">
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 md:-mr-6">
                 <img
                   src="imagens/locacao/parceiro.png"
                   alt="Parceiro"
@@ -154,7 +154,7 @@
                   loading="lazy"
                 />
               </div>
-              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-3 md:-mx-2">
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 md:-mx-6">
                 <img
                   src="imagens/locacao/parceiro2.png"
                   alt="Parceiro"
@@ -170,7 +170,7 @@
                   loading="lazy"
                 />
               </div>
-              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-2 sm:ml-0">
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-2 sm:ml-0 md:ml-4">
                 <img
                   src="imagens/locacao/parceiro4.png"
                   alt="Parceiro"
@@ -178,7 +178,7 @@
                   loading="lazy"
                 />
               </div>
-              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-2">
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-2 md:ml-4">
                 <img
                   src="imagens/locacao/parceiro5.png"
                   alt="Parceiro"
@@ -783,7 +783,7 @@
 
       <!-- Contato -->
       <section id="contato" class="bg-white/5 py-16 sm:py-20">
-        <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
           <div class="space-y-6">
             <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
               Solicite seu Orçamento
@@ -819,113 +819,6 @@
               </p>
             </div>
           </div>
-          <form
-            id="contact-form"
-            class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 p-6 shadow-xl backdrop-blur"
-            aria-label="Formulário de solicitação de orçamento"
-          >
-            <div class="flex flex-col gap-2">
-              <label for="nome" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Nome Completo
-              </label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Seu nome completo"
-                required
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="email" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                E-mail
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="nome@email.com"
-                required
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="telefone" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Telefone / WhatsApp
-              </label>
-              <input
-                type="tel"
-                id="telefone"
-                name="telefone"
-                placeholder="(11) 99999-9999"
-                required
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="evento" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Tipo de Evento
-              </label>
-              <select
-                id="evento"
-                name="evento"
-                required
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              >
-                <option value="">Selecione o tipo de evento</option>
-                <option value="show">Show Musical</option>
-                <option value="festival">Festival</option>
-                <option value="evento-corporativo">Evento Corporativo</option>
-                <option value="casamento">Casamento</option>
-                <option value="aniversario">Aniversário</option>
-                <option value="formatura">Formatura</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="data" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Data do Evento
-              </label>
-              <input
-                type="date"
-                id="data"
-                name="data"
-                required
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="equipamentos" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Equipamentos de Interesse
-              </label>
-              <textarea
-                id="equipamentos"
-                name="equipamentos"
-                rows="3"
-                placeholder="Descreva os equipamentos que você precisa (palco, som, iluminação, etc.)"
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              ></textarea>
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="mensagem" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Mensagem Adicional
-              </label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                rows="4"
-                placeholder="Informações adicionais sobre seu evento (local, público estimado, etc.)"
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
-              Enviar Solicitação
-            </button>
-          </form>
         </div>
       </section>
     </main>
@@ -939,70 +832,10 @@
       </div>
     </footer>
 
-    <script>
-      // Formulário de Contato
-      const contactForm = document.getElementById('contact-form');
-
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Coletar dados do formulário
-        const formData = {
-          nome: document.getElementById('nome').value,
-          email: document.getElementById('email').value,
-          telefone: document.getElementById('telefone').value,
-          evento: document.getElementById('evento').value,
-          data: document.getElementById('data').value,
-          equipamentos: document.getElementById('equipamentos').value,
-          mensagem: document.getElementById('mensagem').value
-        };
-
-        // Validação básica
-        if (!formData.nome || !formData.email || !formData.telefone || !formData.evento || !formData.data) {
-          alert('Por favor, preencha todos os campos obrigatórios.');
-          return;
-        }
-
-        // Simular envio (aqui você integraria com um backend)
-        console.log('Dados do formulário:', formData);
-        
-        // Feedback visual
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = 'Enviando...';
-        submitButton.disabled = true;
-
-        // Simular delay de envio
-        setTimeout(() => {
-          alert('Solicitação enviada com sucesso! Nossa equipe entrará em contato em breve.');
-          contactForm.reset();
-          submitButton.textContent = originalText;
-          submitButton.disabled = false;
-        }, 1500);
-      });
-
-      // Máscara para telefone
-      const telefoneInput = document.getElementById('telefone');
-      telefoneInput.addEventListener('input', function(e) {
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length <= 11) {
-          if (value.length <= 10) {
-            value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-          } else {
-            value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-          }
-          e.target.value = value;
-        }
-      });
-
-      // Definir data mínima como hoje
-      const dataInput = document.getElementById('data');
-      const today = new Date().toISOString().split('T')[0];
-      dataInput.setAttribute('min', today);
-    </script>
 
   </body>
 </html>
+
 
 
 
