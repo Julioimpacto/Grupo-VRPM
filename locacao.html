@@ -27,6 +27,9 @@
               primary: '#050505',
               accent: '#cdf756',
               secondary: '#0f172a'
+            },
+            screens: {
+              'duo': '540px'
             }
           }
         }
@@ -51,6 +54,18 @@
       
       .hero-image-zoom {
         animation: zoomInOut 8s ease-in-out infinite;
+      }
+      
+      .parceiro-shadow-white {
+        filter: 
+          drop-shadow(-1px -1px 0 white) 
+          drop-shadow(1px -1px 0 white) 
+          drop-shadow(-1px 1px 0 white) 
+          drop-shadow(1px 1px 0 white)
+          drop-shadow(0 -1px 0 white)
+          drop-shadow(0 1px 0 white)
+          drop-shadow(-1px 0 0 white)
+          drop-shadow(1px 0 0 white);
       }
     </style>
   </head>
@@ -125,13 +140,70 @@
             </p>
           </div>
 
+          <!-- Nossos Parceiros -->
+          <div class="flex flex-col gap-6">
+            <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
+              Nossos Parceiros
+            </h3>
+            <div class="flex items-center justify-between gap-2 pl-0 pr-0 pb-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 sm:justify-start md:grid-cols-6 md:pb-0">
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mr-3 md:-mr-2">
+                <img
+                  src="imagens/locacao/parceiro.png"
+                  alt="Parceiro"
+                  class="h-auto max-h-12 w-auto opacity-80 transition hover:opacity-100 sm:max-h-24 md:max-h-32"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-3 md:-mx-2">
+                <img
+                  src="imagens/locacao/parceiro2.png"
+                  alt="Parceiro"
+                  class="h-auto max-h-10 w-auto opacity-80 transition hover:opacity-100 sm:max-h-16 md:max-h-24"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 -ml-2 md:-ml-2">
+                <img
+                  src="imagens/locacao/parceiro3.png"
+                  alt="Parceiro"
+                  class="parceiro-shadow-white h-auto max-h-12 w-auto opacity-80 transition hover:opacity-100 sm:max-h-44 md:max-h-52"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-2 sm:ml-0">
+                <img
+                  src="imagens/locacao/parceiro4.png"
+                  alt="Parceiro"
+                  class="h-auto max-h-14 w-auto opacity-80 transition hover:opacity-100 sm:max-h-56 md:max-h-64"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 flex-shrink-0 -mx-2">
+                <img
+                  src="imagens/locacao/parceiro5.png"
+                  alt="Parceiro"
+                  class="h-auto max-h-12 w-auto opacity-80 transition hover:opacity-100 sm:max-h-44 md:max-h-52"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 flex-shrink-0">
+                <img
+                  src="imagens/locacao/parceiro6.png"
+                  alt="Parceiro"
+                  class="parceiro-shadow-white h-auto max-h-10 w-auto opacity-80 transition hover:opacity-100 sm:max-h-20 md:max-h-28"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
           <!-- Palcos e Estruturas -->
           <div class="flex flex-col gap-8">
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Palcos
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/palco.png"
@@ -141,11 +213,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Palcos</h4>
+                  <h4 class="font-heading text-lg font-semibold">Palco Concha</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/palco2.png"
@@ -155,11 +227,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Palcos</h4>
+                  <h4 class="font-heading text-lg font-semibold">Palco 8m x 6m</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/palco3.png"
@@ -169,7 +241,7 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Palcos</h4>
+                  <h4 class="font-heading text-lg font-semibold">Palco Cenográfico</h4>
                 </div>
               </article>
             </div>
@@ -180,8 +252,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Som
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/sistemadesom.png"
@@ -195,7 +267,7 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/mesa.png"
@@ -209,7 +281,7 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/microfone.png"
@@ -230,8 +302,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Iluminação
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/iluminacao.png"
@@ -245,31 +317,31 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
-                    src="imagens/locacao/efeitos.png"
-                    alt="Efeitos Especiais"
+                    src="imagens/locacao/iluminacao2.png"
+                    alt="Iluminação"
                     class="h-full w-full object-cover transition-transform group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Efeitos Especiais</h4>
+                  <h4 class="font-heading text-lg font-semibold">Iluminação</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
-                    src="imagens/locacao/painel.png"
-                    alt="Painel de LED"
+                    src="imagens/locacao/iluminacao3.png"
+                    alt="Iluminação"
                     class="h-full w-full object-cover transition-transform group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Painel de LED</h4>
+                  <h4 class="font-heading text-lg font-semibold">Grid de Iluminação</h4>
                 </div>
               </article>
             </div>
@@ -280,8 +352,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Painéis de Led
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/painel.png"
@@ -295,7 +367,7 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/painel2.png"
@@ -305,11 +377,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Painel de LED</h4>
+                  <h4 class="font-heading text-lg font-semibold">Painéis de Led Mega Eventos</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/painel3.png"
@@ -319,7 +391,7 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Painel de LED</h4>
+                  <h4 class="font-heading text-lg font-semibold">Painéis de Led Eventos</h4>
                 </div>
               </article>
             </div>
@@ -330,8 +402,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Tendas
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/tenda.png"
@@ -341,11 +413,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Tendas para Shows</h4>
+                  <h4 class="font-heading text-lg font-semibold">Tenda Chapéu de Bruxa</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/tenda2.png"
@@ -355,11 +427,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Tendas para Festas</h4>
+                  <h4 class="font-heading text-lg font-semibold">Tenda Galpão</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/tenda3.png"
@@ -369,7 +441,7 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Tendas para Eventos</h4>
+                  <h4 class="font-heading text-lg font-semibold">Tenda 10m x 10m</h4>
                 </div>
               </article>
             </div>
@@ -380,8 +452,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Grades e Barricadas
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/grades.png"
@@ -391,11 +463,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Grades</h4>
+                  <h4 class="font-heading text-lg font-semibold">Grades de Ferro</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/barricadas.png"
@@ -409,7 +481,7 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/fechamentos.png"
@@ -430,8 +502,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Arquibancadas
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/arquibancada.png"
@@ -441,11 +513,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Arquibancadas</h4>
+                  <h4 class="font-heading text-lg font-semibold">Arquibancada com Cadeiras </h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/arquibancada2.png"
@@ -455,11 +527,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Arquibancadas Cobertas</h4>
+                  <h4 class="font-heading text-lg font-semibold">Arquibancada Grande Público</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/arquibancada3.png"
@@ -469,7 +541,7 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Arquibancadas com Cadeiras</h4>
+                  <h4 class="font-heading text-lg font-semibold">Arquibancada Esportes de Praia</h4>
                 </div>
               </article>
             </div>
@@ -480,8 +552,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Camarotes
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/camarote.png"
@@ -495,7 +567,7 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/camarote2.png"
@@ -505,11 +577,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Camarotes</h4>
+                  <h4 class="font-heading text-lg font-semibold">Camarote Modelo Rodeio</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/camarote3.png"
@@ -519,7 +591,7 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Camarotes</h4>
+                  <h4 class="font-heading text-lg font-semibold">Camarote Básico</h4>
                 </div>
               </article>
             </div>
@@ -530,8 +602,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Banheiros
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/banheiro.png"
@@ -541,11 +613,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Banheiros</h4>
+                  <h4 class="font-heading text-lg font-semibold">Banheiro Vip</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/banheiro2.png"
@@ -555,11 +627,11 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Banheiros</h4>
+                  <h4 class="font-heading text-lg font-semibold">Banheiros PNE</h4>
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/banheiro3.png"
@@ -569,7 +641,7 @@
                   />
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h4 class="font-heading text-lg font-semibold">Banheiros</h4>
+                  <h4 class="font-heading text-lg font-semibold">Banheiros Químicos</h4>
                 </div>
               </article>
             </div>
@@ -580,8 +652,8 @@
             <h3 class="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-accent sm:text-2xl">
               Outros
             </h3>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+            <div class="grid gap-6 sm:grid-cols-2 duo:grid-cols-3 duo:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-6">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/gerador.png"
@@ -595,7 +667,7 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/camarim.png"
@@ -609,7 +681,7 @@
                 </div>
               </article>
 
-              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent hover:bg-black/60">
+              <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 duo:p-4 md:p-4 transition hover:border-accent hover:bg-black/60">
                 <div class="aspect-video overflow-hidden rounded-xl bg-white/5">
                   <img
                     src="imagens/locacao/monitoramento.png"
@@ -931,6 +1003,7 @@
 
   </body>
 </html>
+
 
 
 
