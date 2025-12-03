@@ -488,7 +488,24 @@
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
         menuLinks.classList.toggle('hidden');
-      }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          menuLinks.classList.remove('hidden');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        } else if (!menuToggle.classList.contains('hidden') && menuToggle.getAttribute('aria-expanded') === 'false') {
+          menuLinks.classList.add('hidden');
+        }
+      });
+
+      window.addEventListener('DOMContentLoaded', () => {
+        setActiveSlide(0);
+        startAutoPlay();
+      });
+    </script>
+  </body>
+</html>
 
 
 
