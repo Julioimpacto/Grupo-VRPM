@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Serviços completos para eventos e shows - Grupo VRPM"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-40">
+      <div class="absolute right-3 top-3 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:right-4 sm:top-4 md:right-6 md:top-4 md:text-base">
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./agencia.html">Agência</a>
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contato">Contato</a>
+      </div>
+      <nav
+        class="relative flex items-center justify-center px-3 pt-2 pb-1 sm:px-4 sm:pt-2 sm:pb-1 md:px-6 md:pt-2 md:pb-1"
+        aria-label="Menu principal"
+      >
+        <a href="agencia.html" class="flex items-center gap-3" aria-label="Voltar para Agência">
+          <img src="imagens/servicos/logoagencia.png" alt="Serviços" class="h-48 w-auto sm:h-56 md:h-64" />
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <section class="relative min-h-screen overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0">
+          <img
+            src="imagens/servicos/capaservicos.png"
+            alt="Capa Serviços"
+            class="h-full w-full object-cover"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-44 sm:px-6 sm:pt-52 md:gap-14 md:px-10 md:pb-20 md:pt-60">
+          <div class="flex max-w-3xl flex-col gap-6">
+            <span class="inline-flex w-max rounded-full border border-white/20 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/70">
+              Serviços
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+              Soluções completas para eventos, shows e produções.
+            </h1>
+            <p class="text-sm text-white/70 sm:text-base">
+              Oferecemos uma ampla gama de serviços especializados para garantir o sucesso de seus eventos. Da segurança à produção, nossa equipe está preparada para atender todas as suas necessidades.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="seguranca">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Segurança
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Serviços de segurança profissionais para eventos de todos os portes. Nossa equipe é treinada e certificada para garantir a proteção de público, artistas e patrimônio.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+                Equipes treinadas e uniformizadas para segurança perimetral e interna.
+              </li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+                Coordenação com autoridades locais e protocolos de emergência.
+              </li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+                Monitoramento em tempo real e comunicação integrada.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="limpeza">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Limpeza</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Serviços de limpeza e manutenção durante e após eventos. Garantimos ambientes limpos e organizados em todas as áreas do evento.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Limpeza durante o evento em todas as áreas comuns.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Limpeza pós-evento completa e eficiente.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Equipe especializada e equipamentos adequados.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="brigadistas">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Brigadistas</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Brigadistas certificados para prevenção e combate a incêndios. Atendemos todas as normas de segurança e legislação vigente.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Brigadistas certificados conforme NR-23 e legislação local.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Inspeção e manutenção de equipamentos de combate a incêndio.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Plano de emergência e evacuação personalizado.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="locutores">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Locutores / Apresentadores / MC</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Profissionais experientes em locução, apresentação e animação de eventos. Nossa equipe garante a comunicação eficiente e o entretenimento do público.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Locutores profissionais com experiência em grandes eventos.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Apresentadores e MCs para cerimônias e shows.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Scripts personalizados e coordenação de timing.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="caixas">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Caixas / Bilheteiras
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Atendimento profissional em pontos de venda e bilheterias. Nossa equipe é treinada para oferecer um atendimento ágil e eficiente ao público.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-2">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+                Equipe treinada para atendimento presencial e venda de ingressos.
+              </li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+                Sistemas de pagamento integrados e controle de caixa.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="controladores">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Controladores de Acesso</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Controle eficiente de acesso ao evento através de profissionais treinados e sistemas integrados. Garantimos a segurança e organização no fluxo de entrada.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-3">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Equipe especializada em controle de acesso e validação de ingressos.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Sistemas de leitura de QR Code e validação digital.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Gestão de áreas VIP e setores diferenciados.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="despachante">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Despachante - Documentação para Liberação de Shows e Eventos</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Assessoria completa na documentação necessária para a liberação de shows e eventos junto aos órgãos competentes. Facilitamos todo o processo burocrático.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Alvarás e licenças municipais para eventos.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Documentação junto à Polícia Civil e Corpo de Bombeiros.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Processos junto a órgãos ambientais quando necessário.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Acompanhamento completo do processo até a liberação final.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="contabilidade">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Contabilidade</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Serviços contábeis especializados para o setor de eventos e entretenimento. Oferecemos assessoria completa para gestão financeira e fiscal.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Gestão contábil e fiscal para empresas do setor.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Elaboração de relatórios financeiros e demonstrativos.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Consultoria tributária e planejamento fiscal.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="ticketeiras">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Ticketeiras - Venda de Ingressos e Tickets de Bares
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Sistemas completos de venda e controle de ingressos e tickets para eventos e estabelecimentos. Soluções integradas para gestão de vendas e controle de acesso.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-2">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+                Plataforma de venda de ingressos online e presencial.
+              </li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">
+                Sistema de tickets para bares e consumação em eventos.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="grafica">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Gráfica – Impressões e Brindes</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Serviços gráficos completos para impressão de materiais promocionais, credenciais, brindes personalizados e itens de merchandising para eventos.
+            </p>
+            <ul class="grid gap-4 sm:grid-cols-3">
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Impressão de materiais gráficos para eventos e shows.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Produção de brindes personalizados e itens promocionais.</li>
+              <li class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Credenciais, pulseiras e materiais de identificação.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="auditoria">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Auditoria em Planilhas de Shows e Eventos</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Auditoria especializada em planilhas de produção, custos e controle financeiro de shows e eventos. Garantimos transparência e precisão na gestão de projetos.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Revisão e validação de planilhas de custos e receitas.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Análise de viabilidade financeira de projetos.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Relatórios detalhados e recomendações estratégicas.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20" id="catering">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Catering – Camarins de Artistas</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Serviço completo de catering especializado para camarins de artistas e áreas VIP. Oferecemos opções personalizadas de alimentação e bebidas.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Cardápios personalizados conforme preferências e restrições.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Serviço completo de alimentação e bebidas em camarins.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Atendimento profissional e discreto para artistas e convidados VIP.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white/5 py-16 sm:py-20" id="midia">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-5">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">Mídia / MKT / Publicidade / Redes Sociais</h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Estratégias completas de comunicação, marketing e publicidade para eventos e shows. Desenvolvemos campanhas integradas on e offline para maximizar o alcance e engajamento.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Gestão de redes sociais e produção de conteúdo digital.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Desenvolvimento de campanhas publicitárias e materiais gráficos.</div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 min-h-[100px] flex items-center">Relações públicas, assessoria de imprensa e cobertura midiática.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contato" class="py-16 sm:py-20">
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+          <div class="space-y-6">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Contato
+            </h2>
+            <p class="text-sm text-white/70 sm:text-base">
+              Entre em contato conosco para solicitar um orçamento ou esclarecer dúvidas sobre nossos serviços.
+            </p>
+            <ul class="space-y-4 text-sm text-white/80 sm:text-base">
+              <li>
+                <span class="font-semibold text-white">E-mail:</span>
+                contato@grupovrpm.com.br
+              </li>
+              <li>
+                <span class="font-semibold text-white">Telefone:</span>
+                +55 (13) 99631-6169
+              </li>
+              <li>
+                <span class="font-semibold text-white">Endereço:</span>
+                Rua Visconde de Cayrú 50/36 – Campo Grande – Santos - SP <br> CEP: 11075-700
+              </li>
+            </ul>
+          </div>
+          <form
+            class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 p-6 shadow-xl backdrop-blur"
+            aria-label="Formulário de contato"
+          >
+            <div class="flex flex-col gap-2">
+              <label for="nome" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Nome
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                E-mail
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nome@email.com"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="mensagem" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+                Mensagem
+              </label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Conte-nos sobre o seu projeto ou necessidade"
+                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/shared/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+  </body>
+</html>

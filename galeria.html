@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Galeria de imagens do Grupo VRPM - Internacional, Política, Artistas Masculinos e Artistas Femininos"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+      
+      .hero-image-zoom {
+        animation: zoomInOut 8s ease-in-out infinite;
+      }
+      
+      .gallery-image {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .gallery-image:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-30">
+      <div class="absolute right-3 top-3 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:right-4 sm:top-4 md:right-6 md:top-4 md:text-base">
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./index.html">Grupo VRPM</a>
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contato">Contato</a>
+      </div>
+      <nav class="flex items-center justify-between bg-transparent px-3 py-4 sm:px-6 md:px-8" aria-label="Menu principal">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Voltar para Grupo VRPM">
+          <img src="imagens/index/logovrpm.png" alt="Grupo VRPM" class="h-28 w-auto object-contain sm:h-32 md:h-36" />
+          <span class="sr-only">Grupo VRPM</span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <section class="relative h-[60vh] overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+          <img
+            src="imagens/galeria/capagaleria.png"
+            alt="Capa Galeria"
+            class="h-full w-full object-cover hero-image-zoom"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-8 pt-24 sm:px-6 sm:pt-28 md:gap-8 md:px-10 md:pb-12 md:pt-32 items-center">
+          <div class="flex max-w-3xl flex-col gap-6 items-center">
+            <span class="inline-flex rounded-full border border-white/20 px-6 py-2 text-lg uppercase tracking-[0.35em] text-white/70 sm:text-xl md:text-2xl">
+              Galeria de Imagens
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight text-center sm:text-4xl md:text-5xl">
+              Momentos que transformam emoções em memórias.
+            </h1>
+            <p class="text-sm text-white/70 text-center sm:text-base">
+              Explore nossa galeria com os melhores momentos de shows, eventos e produções.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Internacional -->
+      <section id="internacional" class="bg-white/5 py-8 sm:py-12">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Internacional
+            </h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/i1.png"
+                alt="Internacional 1"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/i2.png"
+                alt="Internacional 2"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/i3.png"
+                alt="Internacional 3"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/i4.png"
+                alt="Internacional 4"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/i5.png"
+                alt="Internacional 5"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/i6.png"
+                alt="Internacional 6"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Artistas Masculinos -->
+      <section id="artistas-masculinos" class="bg-white/5 py-8 sm:py-12">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Artistas Masculinos
+            </h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a1.png"
+                alt="Artistas 1"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a2.png"
+                alt="Artistas 2"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a3.png"
+                alt="Artistas 3"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a4.png"
+                alt="Artistas 4"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a5.png"
+                alt="Artistas 5"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a6.png"
+                alt="Artistas 6"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a7.png"
+                alt="Artistas 7"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a8.png"
+                alt="Artistas 8"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a9.png"
+                alt="Artistas 9"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a10.png"
+                alt="Artistas 10"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a11.png"
+                alt="Artistas 11"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a12.png"
+                alt="Artistas 12"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a13.png"
+                alt="Artistas 13"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a14.png"
+                alt="Artistas 14"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a15.png"
+                alt="Artistas 15"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a16.png"
+                alt="Artistas 16"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a17.png"
+                alt="Artistas 17"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/a18.png"
+                alt="Artistas 18"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Artistas Femininos -->
+      <section id="artistas-femininos" class="py-8 sm:py-12">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Artistas Femininos
+            </h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/f1.png"
+                alt="Artistas Femininos 1"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/f2.png"
+                alt="Artistas Femininos 2"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/f3.png"
+                alt="Artistas Femininos 3"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/f4.png"
+                alt="Artistas Femininos 4"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/f5.png"
+                alt="Artistas Femininos 5"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/f6.png"
+                alt="Artistas Femininos 6"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/f7.png"
+                alt="Artistas Femininos 7"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Personalidades -->
+      <section id="personalidades" class="bg-white/5 py-8 sm:py-12">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Personalidades
+            </h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/pe1.png"
+                alt="Personalidades 1"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/pe2.png"
+                alt="Personalidades 2"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/pe3.png"
+                alt="Personalidades 3"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Política -->
+      <section id="politica" class="py-8 sm:py-12">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+              Política
+            </h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p1.png"
+                alt="Política 1"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p2.png"
+                alt="Política 2"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p3.png"
+                alt="Política 3"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p4.png"
+                alt="Política 4"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p5.png"
+                alt="Política 5"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p6.png"
+                alt="Política 6"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p7.png"
+                alt="Política 7"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p8.png"
+                alt="Política 8"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p9.png"
+                alt="Política 9"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p10.png"
+                alt="Política 10"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p11.png"
+                alt="Política 11"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="group aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <img
+                src="imagens/galeria/p12.png"
+                alt="Política 12"
+                class="h-full w-full object-contain gallery-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="bg-white/5 py-8 sm:py-12">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
+          <div class="flex flex-col gap-6">
+            <span class="text-lg uppercase tracking-[0.3em] text-accent sm:text-xl md:text-2xl">Contato</span>
+            <div class="grid gap-6 text-base text-white/80 sm:text-lg md:text-xl">
+              <p>
+                <strong class="font-semibold text-white">E-mail:</strong>
+                contato@grupovrpm.com.br
+              </p>
+              <p>
+                <strong class="font-semibold text-white">WhatsApp:</strong>
+                +55 (13) 99631-6169 
+              </p>
+              <p>
+                <strong class="font-semibold text-white">Endereço:</strong>
+                Rua Visconde de Cayrú 50/36 <br> Campo Grande – Santos - SP - CEP: 11075-700
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/shared/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+
