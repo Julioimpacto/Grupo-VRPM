@@ -52,37 +52,25 @@
   </head>
   <body class="bg-primary text-white font-sans antialiased">
     <header class="absolute inset-x-0 top-0 z-30">
-      <nav class="flex items-center justify-between bg-transparent px-3 py-4 sm:px-6 md:px-8" aria-label="Menu principal">
-        <a href="#inicio" class="flex items-center gap-2" aria-label="Grupo VRPM">
+      <nav class="flex flex-col bg-transparent px-3 py-2 sm:px-6 md:flex-row md:items-center md:justify-between md:px-8 md:py-4" aria-label="Menu principal">
+        <div class="flex items-center justify-center gap-3 text-xs tracking-wide sm:gap-4 sm:text-sm md:hidden mb-2">
+          <a class="text-accent nav-link-hover transition uppercase" href="agencia.html">Agência</a>
+          <a class="text-accent nav-link-hover transition uppercase" href="projetos.html">Projetos</a>
+          <a class="text-accent nav-link-hover transition uppercase" href="galeria.html">Galeria</a>
+          <a class="text-accent nav-link-hover transition uppercase" href="#contato">Contato</a>
+        </div>
+        <a href="#inicio" class="flex items-center gap-2 self-start md:self-auto" aria-label="Grupo VRPM">
           <img src="imagens/index/logovrpm.png" alt="Grupo VRPM" class="h-28 w-auto object-contain sm:h-32 md:h-36" />
           <span class="sr-only">Grupo VRPM</span>
         </a>
-        <button
-          id="menu-toggle"
-          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white md:hidden"
-          aria-expanded="false"
-          aria-controls="menu-links"
-        >
-          <span class="sr-only">Abrir menu</span>
-          <svg
-            class="h-6 w-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="1.5"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
         <div
           id="menu-links"
-          class="fixed inset-x-0 top-20 z-30 hidden flex-col gap-4 border-t border-white/10 bg-black/60 px-6 py-6 text-lg tracking-wide uppercase backdrop-blur-sm sm:right-8 sm:top-24 sm:max-w-xs sm:rounded-2xl sm:border sm:px-8 sm:py-8 md:static md:flex md:max-w-none md:flex-row md:items-center md:border-0 md:bg-transparent md:px-0 md:py-0 md:text-base md:-mt-12"
+          class="hidden md:flex md:flex-row md:items-center md:gap-4 md:text-base md:-mt-12"
         >
-          <a class="text-accent nav-link-hover transition" href="agencia.html">Agência Caminho do Mar</a>
-          <a class="text-accent nav-link-hover transition" href="projetos.html">Projetos</a>
-          <a class="text-accent nav-link-hover transition" href="galeria.html">Galeria</a>
-          <a class="text-accent nav-link-hover transition" href="#contato">Contato</a>
+          <a class="text-accent nav-link-hover transition uppercase" href="agencia.html">Agência</a>
+          <a class="text-accent nav-link-hover transition uppercase" href="projetos.html">Projetos</a>
+          <a class="text-accent nav-link-hover transition uppercase" href="galeria.html">Galeria</a>
+          <a class="text-accent nav-link-hover transition uppercase" href="#contato">Contato</a>
         </div>
       </nav>
     </header>
@@ -116,7 +104,7 @@
           class="relative z-20 mx-auto flex min-h-screen max-w-6xl flex-col justify-end px-6 pb-24 pt-32 sm:px-8 sm:pt-36 md:px-12 md:pt-40 lg:pb-32"
         >
           <div class="flex flex-1"></div>
-          <div class="mt-auto flex flex-col gap-8 pb-0 sm:pb-2 lg:pb-3 xl:pb-4 transform translate-y-12 sm:translate-y-16 lg:translate-y-24">
+          <div class="mt-auto flex flex-col gap-8 pb-0 sm:pb-2 lg:pb-3 xl:pb-4 transform translate-y-12 sm:translate-y-16 xl:-translate-y-8 2xl:translate-y-24">
             <div class="text-center uppercase tracking-[0.3em] text-white">
               <span class="block font-heading text-3xl font-semibold sm:text-4xl md:text-5xl logo-gradient">
                 Grupo VRPM
@@ -223,7 +211,7 @@
 
       <section id="expertise" class="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20 md:px-12">
         <div class="flex flex-col gap-10">
-          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+          <div class="flex flex-wrap items-center justify-center gap-8 md:flex-nowrap md:gap-12">
             <img
               src="imagens/index/projetos.png"
               alt="Projetos"
@@ -289,7 +277,7 @@
               Representações Comerciais
             </h2>
           </div>
-          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             <article class="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6 transition hover:border-accent">
               <div class="aspect-square overflow-hidden rounded-xl">
                 <img
@@ -381,8 +369,6 @@
       const indicators = Array.from(document.querySelectorAll('[data-carousel-indicator]'));
       const prevButton = document.querySelector('[data-carousel-prev]');
       const nextButton = document.querySelector('[data-carousel-next]');
-      const menuToggle = document.querySelector('#menu-toggle');
-      const menuLinks = document.querySelector('#menu-links');
 
       let currentSlide = 0;
       let autoPlayInterval;
@@ -442,21 +428,6 @@
         });
       });
 
-      menuToggle?.addEventListener('click', () => {
-        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
-        menuLinks.classList.toggle('hidden');
-      });
-
-      window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768) {
-          menuLinks.classList.remove('hidden');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        } else if (!menuToggle.classList.contains('hidden') && menuToggle.getAttribute('aria-expanded') === 'false') {
-          menuLinks.classList.add('hidden');
-        }
-      });
-
       window.addEventListener('DOMContentLoaded', () => {
         setActiveSlide(0);
         startAutoPlay();
@@ -464,6 +435,7 @@
     </script>
   </body>
 </html>
+
 
 
 
