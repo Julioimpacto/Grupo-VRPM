@@ -40,9 +40,45 @@
   </head>
   <body class="min-h-screen bg-primary text-white font-sans antialiased">
     <header class="absolute inset-x-0 top-0 z-40">
-      <!-- Barra Superior com Pesquisa, Conta e Carrinho -->
+      <!-- Barra Superior com Links, Conta, Carrinho e Pesquisa -->
       <div class="border-b border-white/10 bg-transparent backdrop-blur-sm">
-        <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 md:px-8">
+        <!-- Layout Mobile: Links, Conta e Carrinho na mesma linha -->
+        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:hidden">
+          <!-- Links de Navegação - Esquerda (mobile) -->
+          <div class="flex items-center gap-4">
+            <a class="cursor-pointer text-sm uppercase tracking-wide transition hover:text-accent" href="./agencia.html">Agência</a>
+            <a class="cursor-pointer text-sm uppercase tracking-wide transition hover:text-accent" href="#contato">Contato</a>
+          </div>
+
+          <!-- Links de Navegação e Ações - Direita (mobile) -->
+          <div class="flex items-center gap-4">
+            <!-- Minha Conta -->
+            <a
+              href="#conta"
+              class="flex items-center gap-2 text-sm uppercase tracking-wide text-white/80 transition hover:text-accent"
+              aria-label="Minha Conta"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </a>
+
+            <!-- Carrinho de Compras -->
+            <button
+              id="cart-button"
+              class="relative flex items-center gap-2 text-sm uppercase tracking-wide text-white/80 transition hover:text-accent"
+              aria-label="Carrinho de compras"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span id="cart-count" class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-black">0</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Layout Desktop: Pesquisa centralizada, Conta e Carrinho à direita -->
+        <div class="hidden mx-auto max-w-7xl items-center gap-4 px-4 py-3 sm:flex sm:px-6 md:px-8">
           <!-- Espaço à esquerda para balancear -->
           <div class="flex-1"></div>
 
@@ -85,7 +121,7 @@
 
             <!-- Carrinho de Compras -->
             <button
-              id="cart-button"
+              id="cart-button-desktop"
               class="relative flex items-center gap-2 text-sm uppercase tracking-wide text-white/80 transition hover:text-accent sm:text-base"
               aria-label="Carrinho de compras"
             >
@@ -93,14 +129,37 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
               <span class="hidden sm:inline">Carrinho</span>
-              <span id="cart-count" class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-black">0</span>
+              <span id="cart-count-desktop" class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-black">0</span>
             </button>
           </div>
         </div>
+
+        <!-- Barra de Pesquisa - Mobile (abaixo dos links) -->
+        <div class="mx-auto max-w-7xl px-4 pb-3 sm:hidden">
+          <form class="relative" role="search" aria-label="Buscar produtos">
+            <input
+              type="search"
+              id="search-input-mobile"
+              name="search"
+              placeholder="Buscar produtos..."
+              class="w-full rounded-full border border-white/20 bg-white px-4 py-2 pr-10 text-sm text-black placeholder:text-black/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              aria-label="Campo de busca"
+            />
+            <button
+              type="submit"
+              class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-2 text-black/60 transition hover:text-black focus:outline-none focus:ring-2 focus:ring-accent"
+              aria-label="Buscar"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
 
-      <!-- Links de Navegação Superior -->
-      <div class="absolute left-3 top-3 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:left-4 sm:top-4 md:left-6 md:top-4 md:text-base">
+      <!-- Links de Navegação Superior (Desktop) -->
+      <div class="absolute left-3 top-3 z-50 hidden items-center gap-6 text-lg uppercase tracking-wide sm:flex sm:left-4 sm:top-4 md:left-6 md:top-4 md:text-base">
         <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./agencia.html">Agência</a>
         <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contato">Contato</a>
       </div>
@@ -133,8 +192,8 @@
         </div>
         <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-80 sm:px-6 sm:pt-96 md:gap-14 md:px-10 md:pb-20 md:pt-[28rem]">
           <div class="flex max-w-3xl flex-col gap-6">
-            <span class="inline-flex w-max rounded-full border border-white/20 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/70">
-              Lojinha do Artista
+            <span class="inline-flex w-max rounded-full border border-accent px-4 py-1 text-xs uppercase tracking-[0.35em] text-accent">
+              Lojinha dos Artistas
             </span>
             <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
               Lojinha Oficial dos Artistas.
@@ -374,7 +433,7 @@
 
       <!-- Contato -->
       <section id="contato" class="bg-white/5 py-16 sm:py-20">
-        <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 text-center sm:px-6 md:px-10">
           <div class="space-y-6">
             <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
               Contato Lojinha do Artista
@@ -385,65 +444,18 @@
             <ul class="space-y-4 text-sm text-white/80 sm:text-base">
               <li>
                 <span class="font-semibold text-white">E-mail:</span>
-                lojinha@caminhodomar.com.br
+                lojinha@grupovrpm.com.br
               </li>
               <li>
-                <span class="font-semibold text-white">Telefone:</span>
-                +55 (11) 4500-3030
+                <span class="font-semibold text-white">WhatsApp:</span>
+                +55 (13) 99631-6169
               </li>
               <li>
                 <span class="font-semibold text-white">Endereço:</span>
-                Avenida Atlântica, 707 - São Paulo, SP
+                Rua Visconde de Cayrú 50/36 <br> Campo Grande – Santos - SP - CEP: 11075-700
               </li>
             </ul>
           </div>
-          <form
-            class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 p-6 shadow-xl backdrop-blur"
-            aria-label="Formulário de contato Lojinha do Artista"
-          >
-            <div class="flex flex-col gap-2">
-              <label for="nome" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Nome
-              </label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Seu nome completo"
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="email" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                E-mail
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="nome@email.com"
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="mensagem" class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
-                Mensagem
-              </label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                rows="4"
-                placeholder="Conte-nos sobre sua dúvida ou pedido"
-                class="rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-black transition hover:bg-lime-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
-              Enviar mensagem
-            </button>
-          </form>
         </div>
       </section>
     </main>
@@ -461,13 +473,21 @@
       // Gerenciamento do Carrinho
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
       const cartCount = document.getElementById('cart-count');
+      const cartCountDesktop = document.getElementById('cart-count-desktop');
       const cartButton = document.getElementById('cart-button');
+      const cartButtonDesktop = document.getElementById('cart-button-desktop');
 
       // Atualizar contador do carrinho
       function updateCartCount() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-        cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+        if (cartCount) {
+          cartCount.textContent = totalItems;
+          cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+        }
+        if (cartCountDesktop) {
+          cartCountDesktop.textContent = totalItems;
+          cartCountDesktop.style.display = totalItems > 0 ? 'flex' : 'none';
+        }
         localStorage.setItem('cart', JSON.stringify(cart));
       }
 
@@ -488,10 +508,18 @@
         updateCartCount();
         
         // Feedback visual
-        cartButton.classList.add('animate-pulse');
-        setTimeout(() => {
-          cartButton.classList.remove('animate-pulse');
-        }, 300);
+        if (cartButton) {
+          cartButton.classList.add('animate-pulse');
+          setTimeout(() => {
+            cartButton.classList.remove('animate-pulse');
+          }, 300);
+        }
+        if (cartButtonDesktop) {
+          cartButtonDesktop.classList.add('animate-pulse');
+          setTimeout(() => {
+            cartButtonDesktop.classList.remove('animate-pulse');
+          }, 300);
+        }
       }
 
       // Event listeners para botões "Adicionar ao Carrinho"
@@ -521,13 +549,11 @@
       });
 
       // Funcionalidade da Barra de Pesquisa
-      const searchForm = document.querySelector('form[role="search"]');
+      const searchForms = document.querySelectorAll('form[role="search"]');
       const searchInput = document.getElementById('search-input');
+      const searchInputMobile = document.getElementById('search-input-mobile');
 
-      searchForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        
+      function performSearch(searchTerm) {
         if (searchTerm) {
           // Filtrar produtos visíveis
           const products = document.querySelectorAll('article');
@@ -560,19 +586,44 @@
             product.style.display = '';
           });
         }
-      });
+      }
 
-      // Limpar filtro quando o campo de busca for limpo
-      searchInput.addEventListener('input', function() {
-        if (this.value.trim() === '') {
-          document.querySelectorAll('article').forEach(product => {
-            product.style.display = '';
+      function syncSearchInputs() {
+        if (searchInput && searchInputMobile) {
+          searchInput.addEventListener('input', function() {
+            searchInputMobile.value = this.value;
+            if (this.value.trim() === '') {
+              document.querySelectorAll('article').forEach(product => {
+                product.style.display = '';
+              });
+            }
+          });
+          
+          searchInputMobile.addEventListener('input', function() {
+            searchInput.value = this.value;
+            if (this.value.trim() === '') {
+              document.querySelectorAll('article').forEach(product => {
+                product.style.display = '';
+              });
+            }
           });
         }
+      }
+
+      searchForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const currentInput = this.querySelector('input[type="search"]');
+          const searchTerm = currentInput.value.toLowerCase().trim();
+          performSearch(searchTerm);
+        });
       });
 
-      // Abrir carrinho ao clicar no botão
-      cartButton.addEventListener('click', function() {
+      // Sincronizar os dois campos de pesquisa
+      syncSearchInputs();
+
+      // Função para abrir carrinho
+      function openCart() {
         if (cart.length === 0) {
           alert('Seu carrinho está vazio. Adicione produtos para continuar!');
         } else {
@@ -588,7 +639,15 @@
           cartSummary += `\nTotal: R$ ${total.toFixed(2).replace('.', ',')}`;
           alert(cartSummary);
         }
-      });
+      }
+
+      // Abrir carrinho ao clicar nos botões
+      if (cartButton) {
+        cartButton.addEventListener('click', openCart);
+      }
+      if (cartButtonDesktop) {
+        cartButtonDesktop.addEventListener('click', openCart);
+      }
 
       // Inicializar contador do carrinho
       updateCartCount();
@@ -596,6 +655,7 @@
 
   </body>
 </html>
+
 
 
 
