@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adega Central | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Adega Central Alimentos e Bebidas - Fornecemos todos os tipos de bebidas, alimentos e gelo para seu bar, balada, festa ou show."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-40">
+      <div class="absolute right-3 top-3 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:right-4 sm:top-4 md:right-6 md:top-4 md:text-base">
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./index.html">Grupo VRPM</a>
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contato">Contato</a>
+      </div>
+      <nav
+        class="relative flex items-center justify-center px-3 pt-8 pb-1 sm:px-4 sm:pt-2 sm:pb-1 md:px-6 md:pt-2 md:pb-1"
+        aria-label="Menu principal"
+      >
+        <a href="index.html" class="flex items-center gap-3" aria-label="Voltar para Grupo VRPM">
+          <img src="imagens/adega/logo.png" alt="Adega Central" class="h-48 w-auto sm:h-56 md:h-64" />
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <!-- Hero Section -->
+      <section class="relative min-h-screen overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0">
+          <img
+            src="imagens/adega/capa.png"
+            alt="Adega Central"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-56 sm:px-6 sm:pt-52 md:gap-14 md:px-10 md:pb-20 md:pt-60">
+          <div class="flex max-w-3xl flex-col gap-6">
+            <span class="inline-flex w-max rounded-full border border-accent px-4 py-1 text-xs uppercase tracking-[0.35em] text-accent">
+              Adega Central
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+              Adega Central Alimentos e Bebidas
+            </h1>
+            <p class="text-sm text-white/70 sm:text-base">
+              Soluções completas em alimentos e bebidas para eventos, shows, festas e estabelecimentos comerciais.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Principal -->
+      <section class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-8">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl text-accent">
+              Nossos Serviços
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="rounded-xl border border-white/10 bg-black/40 p-6">
+                <h3 class="font-heading text-xl font-semibold text-accent mb-3">
+                  Fornecimento Completo
+                </h3>
+                <p class="text-sm text-white/70 sm:text-base">
+                  Fornecemos Todos os Tipos de Bebidas, Alimentos e Gelo para seu Bar, Balada, Festa ou Show.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-black/40 p-6">
+                <h3 class="font-heading text-xl font-semibold text-accent mb-3">
+                  Operação de Bares
+                </h3>
+                <p class="text-sm text-white/70 sm:text-base">
+                  Fazemos a operação dos Bares com alimentos e bebidas, de acordo com o seu evento.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-black/40 p-6">
+                <h3 class="font-heading text-xl font-semibold text-accent mb-3">
+                  Controle Online
+                </h3>
+                <p class="text-sm text-white/70 sm:text-base">
+                  Todo o controle de seu evento online, de forma segura com a prestação de contas de forma imediata.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção de Produtos -->
+      <section class="py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl text-accent text-center">
+            Nossos Produtos
+          </h2>
+          <div class="grid gap-8 sm:grid-cols-2">
+            <article class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="aspect-square overflow-hidden rounded-xl">
+                <img
+                  src="imagens/adega/caixa.png"
+                  alt="Caixa Térmica"
+                  class="h-full w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center">
+                <h3 class="font-heading text-lg font-semibold text-accent">Caixa Térmica</h3>
+              </div>
+            </article>
+            <article class="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+              <div class="aspect-square overflow-hidden rounded-xl">
+                <img
+                  src="imagens/adega/balcao.png"
+                  alt="Balcão de Alumínio"
+                  class="h-full w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center">
+                <h3 class="font-heading text-lg font-semibold text-accent">Balcão de Alumínio</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Contato -->
+      <section id="contato" class="py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10 items-center text-center">
+          <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+            Contato Adega Central
+          </h2>
+          <p class="text-sm text-white/70 sm:text-base">
+            Entre em contato conosco para solicitar um orçamento ou esclarecer dúvidas sobre nossos serviços.
+          </p>
+          <ul class="space-y-4 text-sm text-white/80 sm:text-base">
+            <li>
+              <span class="font-semibold text-white">E-mail:</span>
+              adega@grupovrpm.com.br
+            </li>
+            <li>
+              <span class="font-semibold text-white">WhatsApp:</span>
+              +55 (13) 99631-6169
+            </li>
+            <li>
+              <span class="font-semibold text-white">Endereço:</span>
+              Rua Itororó 76 - Centro - Santos - SP - CEP: 11010-070
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/shared/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+  </body>
+</html>
+
