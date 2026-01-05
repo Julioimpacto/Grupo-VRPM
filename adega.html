@@ -36,6 +36,9 @@
       html {
         scroll-behavior: smooth;
       }
+      .logo-shadow-white {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 4px rgba(255, 255, 255, 0.7));
+      }
     </style>
   </head>
   <body class="min-h-screen bg-primary text-white font-sans antialiased">
@@ -49,7 +52,7 @@
         aria-label="Menu principal"
       >
         <a href="index.html" class="flex items-center gap-3" aria-label="Voltar para Grupo VRPM">
-          <img src="imagens/adega/logo.png" alt="Adega Central" class="h-48 w-auto sm:h-56 md:h-64" />
+          <img src="imagens/adega/logo.png" alt="Adega Central" class="h-48 w-auto sm:h-56 md:h-64 logo-shadow-white" />
         </a>
       </nav>
     </header>
@@ -195,4 +198,5 @@
 
   </body>
 </html>
+
 
