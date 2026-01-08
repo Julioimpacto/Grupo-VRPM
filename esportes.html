@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esportes | Grupo VRPM</title>
+    <meta
+      name="description"
+      content="Grupo VRPM Esportes - Desenvolvimento e produção de projetos esportivos, eventos esportivos e soluções completas para o mundo dos esportes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+              heading: ['Montserrat', 'ui-sans-serif', 'system-ui']
+            },
+            colors: {
+              primary: '#050505',
+              accent: '#cdf756',
+              secondary: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .logo-shadow-white {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 4px rgba(255, 255, 255, 0.7));
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-primary text-white font-sans antialiased">
+    <header class="absolute inset-x-0 top-0 z-40">
+      <div class="absolute right-3 top-3 z-50 flex items-center gap-6 text-lg uppercase tracking-wide sm:right-4 sm:top-4 md:right-6 md:top-4 md:text-base">
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="./agencia.html">Agência</a>
+        <a class="relative z-50 cursor-pointer transition hover:text-accent" href="#contato">Contato</a>
+      </div>
+      <nav
+        class="relative flex items-center justify-center px-3 pt-8 pb-1 sm:px-4 sm:pt-2 sm:pb-1 md:px-6 md:pt-2 md:pb-1"
+        aria-label="Menu principal"
+      >
+        <a href="agencia.html" class="flex items-center gap-3" aria-label="Voltar para Agência Caminho do Mar">
+          <img src="imagens/esportes/logo.png" alt="Esportes" class="h-64 w-auto sm:h-72 md:h-96 logo-shadow-white" />
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <!-- Hero Section -->
+      <section class="relative min-h-screen overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 z-0">
+          <div class="h-full w-full bg-gradient-to-b from-primary via-primary to-black/90"></div>
+        </div>
+        <div class="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-96 sm:px-6 sm:pt-88 md:gap-14 md:px-10 md:pb-20 md:pt-96">
+          <div class="flex max-w-3xl flex-col gap-6">
+            <span class="inline-flex w-max rounded-full border border-accent px-4 py-1 text-xs uppercase tracking-[0.35em] text-accent">
+              Esportes
+            </span>
+            <h1 class="font-heading text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+              Projetos Esportivos
+            </h1>
+            <p class="text-sm text-white/70 sm:text-base">
+              Desenvolvemos e produzimos projetos esportivos completos, desde a concepção até a execução, criando experiências memoráveis no mundo dos esportes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Principal -->
+      <section class="bg-white/5 py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10">
+          <article class="space-y-8">
+            <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl text-accent">
+              Nossos Serviços
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="rounded-xl border border-white/10 bg-black/40 p-6">
+                <h3 class="font-heading text-xl font-semibold text-accent mb-3">
+                  Produção de Eventos Esportivos
+                </h3>
+                <p class="text-sm text-white/70 sm:text-base">
+                  Produção completa de eventos esportivos, desde competições locais até grandes campeonatos, com toda a estrutura necessária para o sucesso.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-black/40 p-6">
+                <h3 class="font-heading text-xl font-semibold text-accent mb-3">
+                  Gestão de Projetos Esportivos
+                </h3>
+                <p class="text-sm text-white/70 sm:text-base">
+                  Planejamento estratégico, gestão de recursos e coordenação completa de projetos esportivos de pequeno a grande porte.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-black/40 p-6">
+                <h3 class="font-heading text-xl font-semibold text-accent mb-3">
+                  Consultoria Esportiva
+                </h3>
+                <p class="text-sm text-white/70 sm:text-base">
+                  Consultoria especializada para desenvolvimento de projetos esportivos, captação de recursos e parcerias estratégicas.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção de Contato -->
+      <section id="contato" class="py-16 sm:py-20">
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 md:px-10 items-center text-center">
+          <h2 class="font-heading text-2xl font-semibold uppercase tracking-[0.25em] sm:text-3xl">
+            Contato Esportes
+          </h2>
+          <p class="text-sm text-white/70 sm:text-base">
+            Entre em contato conosco para desenvolver seu próximo projeto esportivo ou esclarecer dúvidas sobre nossos serviços.
+          </p>
+          <ul class="space-y-4 text-sm text-white/80 sm:text-base">
+            <li>
+              <span class="font-semibold text-white">E-mail:</span>
+              contato@grupovrpm.com.br
+            </li>
+            <li>
+              <span class="font-semibold text-white">WhatsApp:</span>
+              +55 (13) 99631-6169
+            </li>
+            <li>
+              <span class="font-semibold text-white">Endereço:</span>
+              Rua Visconde de Cayrú 50/36 <br> Campo Grande – Santos - SP - CEP: 11075-700
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
+        <p class="text-base">
+          © 2025 Grupo VRPM — Produzido por:
+        </p>
+        <img src="imagens/shared/footerj3.png" alt="J3 Digital Mídia" class="h-8 w-auto" />
+      </div>
+    </footer>
+
+  </body>
+</html>
+
