@@ -99,15 +99,30 @@
           </h2>
           <span class="text-3xl text-accent sm:text-4xl" aria-hidden="true">&#8595;</span>
           <div class="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
-            <a href="anos80.html" class="w-full rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black sm:w-auto">
-              Show Anos 80
-            </a>
-            <a href="imagens/projetos/blackeyed.pdf" target="_blank" rel="noopener noreferrer" class="w-full rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black sm:w-auto">
-              Show Black Eyed Peas
-            </a>
-            <a href="imagens/projetos/festajunina.pdf" target="_blank" rel="noopener noreferrer" class="w-full rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black sm:w-auto">
-              Festa Junina Clube Pinheiros
-            </a>
+            <div class="flex w-full flex-col items-center gap-2 sm:w-auto">
+              <a href="anos80.html" class="w-full rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black sm:w-auto">
+                Show Anos 80
+              </a>
+              <a href="anos80.html" class="w-full rounded-full border border-orange-500 bg-orange-500 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-orange-400 hover:text-black sm:w-auto">
+                Visualizar
+              </a>
+            </div>
+            <div class="flex w-full flex-col items-center gap-2 sm:w-auto">
+              <a href="imagens/projetos/blackeyed.pdf" target="_blank" rel="noopener noreferrer" download="blackeyed.pdf" class="w-full rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black sm:w-auto">
+                Show Black Eyed Peas
+              </a>
+              <a href="imagens/projetos/blackeyed.pdf" data-force-download="blackeyed.pdf" class="w-full rounded-full border border-orange-500 bg-orange-500 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-orange-400 hover:text-black sm:w-auto">
+                Baixar
+              </a>
+            </div>
+            <div class="flex w-full flex-col items-center gap-2 sm:w-auto">
+              <a href="imagens/projetos/festajunina.pdf" target="_blank" rel="noopener noreferrer" download="festajunina.pdf" class="w-full rounded-full border border-accent bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent transition hover:bg-accent hover:text-black sm:w-auto">
+                Festa Junina Clube Pinheiros
+              </a>
+              <a href="imagens/projetos/festajunina.pdf" data-force-download="festajunina.pdf" class="w-full rounded-full border border-orange-500 bg-orange-500 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-orange-400 hover:text-black sm:w-auto">
+                Baixar
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -374,6 +389,39 @@
         go(0);
         startAutoplay();
       })();
+
+      document.querySelectorAll('a[data-force-download]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          var fileUrl = link.getAttribute('href');
+          var fileName = link.getAttribute('data-force-download') || 'arquivo.pdf';
+
+          fetch(fileUrl)
+            .then(function (response) {
+              return response.blob();
+            })
+            .then(function (blob) {
+              var blobUrl = URL.createObjectURL(blob);
+              var tempLink = document.createElement('a');
+              tempLink.href = blobUrl;
+              tempLink.download = fileName;
+              document.body.appendChild(tempLink);
+              tempLink.click();
+              tempLink.remove();
+              URL.revokeObjectURL(blobUrl);
+            })
+            .catch(function () {
+              // Fallback: tenta o download padrão do navegador.
+              var tempLink = document.createElement('a');
+              tempLink.href = fileUrl;
+              tempLink.download = fileName;
+              document.body.appendChild(tempLink);
+              tempLink.click();
+              tempLink.remove();
+            });
+        });
+      });
     </script>
   </body>
 </html>
